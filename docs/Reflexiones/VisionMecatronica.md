@@ -1,1 +1,10 @@
-agscyidcadchbsdvfr
+VISIÓN MECATRÓNICA ALE
+Hecho por Alejandra Aguirre Beirana
+
+Elegí ingeniería mecatrónica porque desde chica siempre fui muy curiosa y me interesaba mucho aprender cómo funcionaban las cosas, y mientras fui creciendo, me dí cuenta que podía descubrir eso sí entendía la ciencia detrás de los objetos. Por eso me puse a estudiar matemáticas, y después física, y después electrónica y después programación, y así seguía hasta que lograba tener una explicación lógica para las cosas que me hacían dudar. Así que cuando llegó el momento de escoger carrera, escogí mecatrónica porque sentí que era la opción que más me daba la libertad de seguir explorando y descubriendo cosas relacionadas a lo que me gusta hacer.
+
+De las cuatro áreas creo que la que me llama más la atención es la programación (software) porque siento que es algo a lo que se le puede sacar muchísimo provecho y más ahora con el tema de la inteligencia artificial, y también porque creo que mucha gente subestima la cantidad de problemas que se podrían resolver sabiendo utilizar la programación y las herramientas que tenemos a la mano si sabemos usar la tecnología a nuestro favor.
+
+Al terminar la carrera me encantaría principalmente poder “construir” apps y también saber hacer prototipos para poder convertir mis ideas a realidad y ayudar a las personas con cosas de la vida diaria. También me gustaría poder hacer algún tipo de mecanismo que ayude a la salud como prótesis o inventar algo más que pueda hacerle la vida más fácil a personas mayores o con alguna enfermedad/discapacidad.
+
+Un problema de la vida diaria que me gustaría poder resolver es la pobreza, y aunque se que no se puede erradicar por completo, se puede disminuir. Un ingeniero mecatrónico podría contribuir con este problema mediante la creación de aplicaciones que ayuden directamente al usuario por ejemplo una app que compare precios en diferentes supermercados para que las personas puedan adquirir necesidades básicas por un precio menor o para que les alcance su salario para llevar una mejor dieta.
