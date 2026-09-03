@@ -130,10 +130,10 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 - [x] **Imagenes:** Sección 7 del presente reporte.
 
 
-![Osciloscopio](../recursos/imgs/../imagenes/generador.jpeg){loading=lazy}
-![Osciloscopio](../recursos/imgs/../imagenes/onda.jpeg){loading=lazy}
-![Osciloscopio](../recursos/imgs/../imagenes/tinkercad.jpeg){loading=lazy}
-![Osciloscopio](../recursos/imgs/../imagenes/video.mp4){loading=lazy}
+![Generador](../imagenes/generador.jpeg){loading=lazy}
+![Onda](../imagenes/onda.jpeg){loading=lazy}
+![Tinkercad](../imagenes/tinkercad.jpeg){loading=lazy}
+![Video](../imagenes/video.mp4){loading=lazy}
 
 
 
