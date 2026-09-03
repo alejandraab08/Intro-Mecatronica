@@ -130,12 +130,10 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 - [x] **Imagenes:** Sección 7 del presente reporte.
 
 
-<img src="../imagenes/generador.jpeg" alt="Imagen del generador" width="420">
-<img src="../imagenes/onda.jpeg" alt="Imagen de la onda del circuito" width="420">
-<img src="../imagenes/tinkercad.jpeg" alt="Imagen del circuito en tinkercad" width="420">
-<video width="320" height="240" controls>
-  <source src="../imagenes/video.mp4" type="video/mp4">
-</video>
+![Osciloscopio](../recursos/imgs/../imagenes/generador.jpeg){loading=lazy}
+![Osciloscopio](../recursos/imgs/../imagenes/onda.jpeg){loading=lazy}
+![Osciloscopio](../recursos/imgs/../imagenes/tinkercad.jpeg){loading=lazy}
+![Osciloscopio](../recursos/imgs/../imagenes/video.mp4){loading=lazy}
 
 
 
