@@ -119,10 +119,7 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 
 * Se comprobó experimentalmente el funcionamiento del temporizador NE555 en modo astable, logrando la oscilación continua y el parpadeo del LED a una frecuencia aproximada de $0.68\,\text{Hz}$.
 * La correlación entre la teoría matemática y los datos medidos en osciloscopio fue alta, obteniendo desviaciones menores al $3.5\%$ en frecuencia y ciclo de trabajo.
-* El análisis de la bitácora de errores permitió afianzar el criterio técnico sobre la correcta colocación de las sondas de osciloscopio y la importancia del punto de referencia a tierra (GND) para obtener lecturas confiables.
-
----
-
+* El análisis de la bitácora de errores permitió afianzar el criterio técnico sobre la correcta colocación de las sondas de osciloscopio y la importancia del punto de referencia a tierra (GND) para obtener lecturas configuradas.
 ## 8. Entregables Adjuntos (Checklist del Portafolio)
 
 - [x] **Esquemático anotado:** Diagrama del circuito con valores de $R_A, R_B, C$ explícitos.
@@ -130,3 +127,16 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 - [x] **Tabla de medición vs. teoría:** Completada con \% de error e interpretaciones.
 - [x] **Mini-video ($\le 60\text{ s}$):** Grabación mostrando la onda en el osciloscopio y parpadeo del LED con voz en off.
 - [x] **Bitácora de errores:** Sección 6 del presente reporte.
+- [x] **Imagenes:** Sección 7 del presente reporte.
+
+
+<img src="../imagenes/imgs/generador.jpeg" alt="Imagen del generador" width="420">
+<img src="../imagenes/imgs/onda.jpeg" alt="Imagen de la onda del circuito" width="420">
+<img src="../imagenes/imgs/tinkercad.jpeg" alt="Imagen del circuito en tinkercad" width="420">
+<video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+
+
+
