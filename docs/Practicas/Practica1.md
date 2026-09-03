@@ -130,11 +130,11 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 - [x] **Imagenes:** Sección 7 del presente reporte.
 
 
-<img src="../imagenes/imgs/generador.jpeg" alt="Imagen del generador" width="420">
-<img src="../imagenes/imgs/onda.jpeg" alt="Imagen de la onda del circuito" width="420">
-<img src="../imagenes/imgs/tinkercad.jpeg" alt="Imagen del circuito en tinkercad" width="420">
+<img src="../imagenes/generador.jpeg" alt="Imagen del generador" width="420">
+<img src="../imagenes/onda.jpeg" alt="Imagen de la onda del circuito" width="420">
+<img src="../imagenes/tinkercad.jpeg" alt="Imagen del circuito en tinkercad" width="420">
 <video width="320" height="240" controls>
-  <source src="video.mp4" type="video/mp4">
+  <source src="../imagenes/video.mp4" type="video/mp4">
 </video>
 
 
