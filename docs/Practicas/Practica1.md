@@ -120,6 +120,8 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 * Se comprobó experimentalmente el funcionamiento del temporizador NE555 en modo astable, logrando la oscilación continua y el parpadeo del LED a una frecuencia aproximada de $0.68\,\text{Hz}$.
 * La correlación entre la teoría matemática y los datos medidos en osciloscopio fue alta, obteniendo desviaciones menores al $3.5\%$ en frecuencia y ciclo de trabajo.
 * El análisis de la bitácora de errores permitió afianzar el criterio técnico sobre la correcta colocación de las sondas de osciloscopio y la importancia del punto de referencia a tierra (GND) para obtener lecturas configuradas.
+
+* Se ocupó IA para darle formato a la práctica
 ## 8. Entregables Adjuntos (Checklist del Portafolio)
 
 - [x] **Esquemático anotado:** Diagrama del circuito con valores de $R_A, R_B, C$ explícitos.
@@ -138,6 +140,6 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 </video>
 
 
-* Se ocupó IA para darle formato a la práctica
+
 
 
