@@ -133,8 +133,11 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 ![Generador](../imagenes/generador.jpeg){loading=lazy}
 ![Onda](../imagenes/onda.jpeg){loading=lazy}
 ![Tinkercad](../imagenes/tinkercad.jpeg){loading=lazy}
-![Video](../imagenes/video.mp4){loading=lazy}
+<video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
 
 
+* Se ocupó IA para darle formato a la práctica
 
 
