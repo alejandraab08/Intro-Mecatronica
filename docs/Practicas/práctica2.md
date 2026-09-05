@@ -38,19 +38,19 @@ Implementar el control de entradas y salidas digitales en un microcontrolador ab
 
 ## 3. 🧪 Desarrollo de las 4 Prácticas
 
- ### BLINK (Salida Digital a 1 Hz)
+### BLINK (Salida Digital a 1 Hz)
 
  * **Descripción:** Esta práctica se enfoca en el control temporal básico de una **salida digital pura**. A diferencia del parpadeo tradicional con `delay()`, aquí el microcontrolador evalúa constantemente el tiempo transcurrido mediante `millis()`, lo que permite alternar el estado del LED exactamente cada 500 ms (frecuencia de 1 Hz) sin congelar la ejecución de otras instrucciones del sistema.
 
- ### BLINK con Botón (Entrada Digital Directa)
+### BLINK con Botón (Entrada Digital Directa)
 
  * **Descripción:** A diferencia de la primera práctica, aquí se introduce el uso de una **entrada digital reactiva**. Se aprovecha la resistencia interna de la placa ESP32(`INPUT_PULLUP`), lo que elimina la necesidad de colocar resistencias físicas externas. El LED enciende en tiempo real únicamente mientras el botón permanece presionado (lectura `LOW`), demostrando la respuesta directa de una salida (LED) ante el estado instantáneo de una entrada (botón).
 
- ### Mini Práctica 3: TOGGLE con Antirrebote (Memoria de Estado)
+### Mini Práctica 3: TOGGLE con Antirrebote (Memoria de Estado)
 
  * **Descripción:** Mientras que la Práctica 2 requiere mantener presionado el botón para activar la salida, esta mini práctica implementa la **alternancia de estado (*Toggle*)**. Cada pulsación del botón invierte el estado del LED (de encendido a apagado o viceversa). Además, incorpora un filtro por software de 30 ms con `millis()` para prevenir que las vibraciones mecánicas del botón generen falsos cambios de estado al presionar.
 
- ### Mini Práctica 4 (EXTRA): Contador de Presiones Con vs. Sin Antirrebote
+### Mini Práctica 4 (EXTRA): Contador de Presiones Con vs. Sin Antirrebote
 
  * **Descripción:** Esta prueba fue diseñada para **evidenciar cuantitativamente el efecto del ruido mecánico (rebotes)** mediante el monitor serie. Mientras que la Práctica 3 aplica el filtro de forma transparente para prender y apagar un LED, esta mini práctica registra y cuenta cada pulso recibido al presionar el botón, comparando de forma directa la imprecisión del conteo directo contra la precisión del conteo filtrado.
 
