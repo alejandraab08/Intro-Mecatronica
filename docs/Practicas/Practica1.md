@@ -204,11 +204,11 @@ $$\% \text{ Error} = \left| \frac{5.400 - 5.164}{5.164} \right| \times 100 \appr
 ## 5. Video
 
 <video width="320" height="240" controls>
-  <source src="videomono.mp4" type="video/mp4">
+  <source src="videomal.mp4" type="video/mp4">
 </video>
 
 <video width="320" height="240" controls>
-  <source src="videomal.mp4" type="video/mp4">
+  <source src="videomono.mp4" type="video/mp4">
 </video>
 
 > **Nota 1:** El primer video es de cuando nuestro circuito seguía "erróneo" (no estaba mal conectado pero el valor de las resistencias hacia que nuestros cambios fueran inmediatos y por lo tanto imposibles de percibir a simple vista).
