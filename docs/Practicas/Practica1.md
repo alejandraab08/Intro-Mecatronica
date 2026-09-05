@@ -121,7 +121,7 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 * La correlación entre la teoría matemática y los datos medidos en osciloscopio fue alta, obteniendo desviaciones menores al $3.5\%$ en frecuencia y ciclo de trabajo.
 * El análisis de la bitácora de errores permitió afianzar el criterio técnico sobre la correcta colocación de las sondas de osciloscopio y la importancia del punto de referencia a tierra (GND) para obtener lecturas configuradas.
 
-* Se ocupó IA para darle formato a la práctica
+
 ## 8. Entregables Adjuntos (Checklist del Portafolio)
 
 - [x] **Esquemático anotado:** Diagrama del circuito con valores de $R_A, R_B, C$ explícitos.
@@ -138,6 +138,9 @@ En el desarrollo práctico de los circuitos electrónicos es habitual enfrentars
 <video width="320" height="240" controls>
   <source src="video.mp4" type="video/mp4">
 </video>
+
+
+
 
 
 # Práctica EXTRA: Generación de Pulso Fijo (555 Monoestable)
@@ -209,10 +212,11 @@ $$\% \text{ Error} = \left| \frac{5.400 - 5.164}{5.164} \right| \times 100 \appr
 </video>
 
 > **Nota 1:** El primer video es de cuando nuestro circuito seguía "erróneo" (no estaba mal conectado pero el valor de las resistencias hacia que nuestros cambios fueran inmediatos y por lo tanto imposibles de percibir a simple vista).
+-
 > **Nota 2:** Mis videos por alguna razón no se reproducen bien, ya hemos intentado arreglar el problema pero persiste.
 
 
-## 5.1 Explicación Videos
+### 5.1 Explicación Videos
 
 En este video mostramos la implementación del temporizador 555 en modo monoestable, cuya función es generar un pulso de duración fija al recibir un disparo manual.
 
@@ -224,6 +228,6 @@ Al principio probamos con $R_A = 1\text{ k}\Omega$, pero el pulso duraba miliseg
 En esta práctica se comprobó exitosamente el funcionamiento del temporizador 555 en configuración monoestable para la generación de un pulso de duración fija mediante la activación por un botón. Se evidenció cómo la constante de tiempo dependerá directamente de los valores del circuito $RC$, ya que al corregir el valor de la resistencia de $1\text{ k}\Omega$ a $47\text{ k}\Omega$ el retardo pasó de ser imperceptible a tener un intervalo claramente visible. Asimismo, el porcentaje de error de $4.57\%$ entre el valor teórico ($5.164\text{ s}$) y el medido ($5.4\text{ s}$) demostró ser completamente aceptable, respaldando la utilidad de este circuito en aplicaciones reales de retardos y filtrado antirrebote por hardware.
 
 
-
+**Se ocupó IA para darle formato a la práctica y agregar fórmulas**
 
 
