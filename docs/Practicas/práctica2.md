@@ -75,12 +75,12 @@ Implementar el control de entradas y salidas digitales en un microcontrolador ab
 ---
 
 ## 5. Mini-Video y fotos
-![Generador](../imagenes/fotoa.jpeg){loading=lazy}
-![Generador](../imagenes/fotob.jpeg){loading=lazy}
-![Generador](../imagenes/fotoc.jpeg){loading=lazy}
-![Generador](../imagenes/fotod.jpeg){loading=lazy}
-![Generador](../imagenes/fotoe.jpeg){loading=lazy}
-![Generador](../imagenes/fotof.jpeg){loading=lazy}
+![Foto1](../imagenes/fotoa.jpeg){loading=lazy}
+![Foto2](../imagenes/fotob.jpeg){loading=lazy}
+![Foto3](../imagenes/fotoc.jpeg){loading=lazy}
+![Foto4](../imagenes/fotod.jpeg){loading=lazy}
+![Foto5](../imagenes/fotoe.jpeg){loading=lazy}
+![Foto6](../imagenes/fotof.jpeg){loading=lazy}
 
 <video width="320" height="240" controls>
   <source src="video1.mp4" type="video/mp4">
