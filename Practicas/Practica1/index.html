@@ -1,0 +1,1248 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../../SobreMi/">
+      
+      
+        <link rel="next" href="../pr%C3%A1ctica2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 1 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-circuito-temporizador-555-en-modo-astable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lista-de-materiales-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lista de Materiales y Componentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desarrollo-teorico-y-formulas-de-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Desarrollo Teórico y Fórmulas de Diseño
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Desarrollo Teórico y Fórmulas de Diseño">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulas-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fórmulas Generales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustitucion-y-calculos-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustitución y Cálculos Teóricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-comparativa-datos-teoricos-vs-medidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla Comparativa: Datos Teóricos vs. Medidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-explicacion-de-las-diferencias-teorico-vs-medido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Explicación de las Diferencias (Teórico vs. Medido)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Bitácora de Errores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-entregables-adjuntos-checklist-del-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Entregables Adjuntos (Checklist del Portafolio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr%C3%A1ctica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyectos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyectos/Proyecto1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lista-de-materiales-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Lista de Materiales y Componentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desarrollo-teorico-y-formulas-de-diseno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Desarrollo Teórico y Fórmulas de Diseño
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Desarrollo Teórico y Fórmulas de Diseño">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulas-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fórmulas Generales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sustitucion-y-calculos-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sustitución y Cálculos Teóricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-tabla-comparativa-datos-teoricos-vs-medidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Tabla Comparativa: Datos Teóricos vs. Medidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-explicacion-de-las-diferencias-teorico-vs-medido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Explicación de las Diferencias (Teórico vs. Medido)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-bitacora-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Bitácora de Errores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-entregables-adjuntos-checklist-del-portafolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Entregables Adjuntos (Checklist del Portafolio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-circuito-temporizador-555-en-modo-astable">Reporte de Práctica: Circuito Temporizador 555 en Modo Astable</h1>
+<p><strong>Institución:</strong> Universidad Iberoamericana Puebla<br />
+<strong>Materia:</strong> Introducción a la Mecatrónica<br />
+<strong>Tema:</strong> Electrónica Básica / Osciladores RC con CI 555  </p>
+<hr />
+<h2 id="1-objetivos">1. Objetivos</h2>
+<ul>
+<li><strong>General:</strong> Construir y analizar un circuito oscilador astable utilizando el circuito integrado NE555 para generar un parpadeo de LED a frecuencia controlada.</li>
+<li><strong>Específicos:</strong></li>
+<li>Calcular teóricamente la frecuencia (<span class="arithmatex">\(f\)</span>), ciclo de trabajo (<em>Duty Cycle</em>), tiempos en alto/bajo y voltajes de salida.</li>
+<li>Implementar el montaje práctico en <em>protoboard</em> con los componentes seleccionados.</li>
+<li>Medir experimentalmente los parámetros del circuito utilizando un multímetro digital y un osciloscopio.</li>
+<li>Comparar los valores teóricos contra los medidos, determinando el porcentaje de error absoluto y justificando las diferencias.</li>
+<li>Identificar y solucionar fallas de medición técnica durante el laboratorio (Bitácora de errores).</li>
+</ul>
+<hr />
+<h2 id="2-lista-de-materiales-y-componentes">2. Lista de Materiales y Componentes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Cantidad</th>
+<th style="text-align: left;">Componente / Equipo</th>
+<th style="text-align: left;">Descripción / Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">Circuito Integrado</td>
+<td style="text-align: left;">NE555 (Encapsulado DIP-8)</td>
+</tr>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">LED</td>
+<td style="text-align: left;">Diodo emisor de luz estándar (Color Rojo/Verde)</td>
+</tr>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">Resistor de carga LED</td>
+<td style="text-align: left;"><span class="arithmatex">\(R_{LED} = 330\,\Omega\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">2×</td>
+<td style="text-align: left;">Resistores temporizadores</td>
+<td style="text-align: left;"><span class="arithmatex">\(R_A = 1\,\text{k}\Omega\)</span>, <span class="arithmatex">\(R_B = 10\,\text{k}\Omega\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">Capacitor de temporización</td>
+<td style="text-align: left;"><span class="arithmatex">\(C = 100\,\mu\text{F}\)</span> (Electrolítico)</td>
+</tr>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">Capacitor de desacoplo</td>
+<td style="text-align: left;"><span class="arithmatex">\(C_{CTRL} = 10\,\text{nF}\)</span> (Cerámico, conectado al Pin 5)</td>
+</tr>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">Fuente de Poder</td>
+<td style="text-align: left;">Fuente DC regulada a <span class="arithmatex">\(5.0\,\text{V}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">1×</td>
+<td style="text-align: left;">Instrumentación</td>
+<td style="text-align: left;">Multímetro digital y Osciloscopio con puntas de prueba</td>
+</tr>
+<tr>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Auxiliares</td>
+<td style="text-align: left;">Protoboard y cables de conexión (<em>jumpers</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-desarrollo-teorico-y-formulas-de-diseno">3. Desarrollo Teórico y Fórmulas de Diseño</h2>
+<p>El temporizador 555 en configuración <strong>astable</strong> no posee un estado estable; conmuta continuamente entre el estado ALTO y BAJO. La carga del capacitor <span class="arithmatex">\(C\)</span> se realiza a través de <span class="arithmatex">\((R_A + R_B)\)</span>, mientras que la descarga ocurre exclusivamente a través de <span class="arithmatex">\(R_B\)</span>.</p>
+<h3 id="formulas-generales">Fórmulas Generales</h3>
+<ol>
+<li>
+<p><strong>Tiempo en ALTO (<span class="arithmatex">\(t_{ALTO}\)</span>):</strong>
+   $<span class="arithmatex">\(t_{ALTO} = 0.693 \cdot (R_A + R_B) \cdot C\)</span>$</p>
+</li>
+<li>
+<p><strong>Tiempo en BAJO (<span class="arithmatex">\(t_{BAJO}\)</span>):</strong>
+   $<span class="arithmatex">\(t_{BAJO} = 0.693 \cdot R_B \cdot C\)</span>$</p>
+</li>
+<li>
+<p><strong>Periodo Total (<span class="arithmatex">\(T\)</span>):</strong>
+   $<span class="arithmatex">\(T = t_{ALTO} + t_{BAJO} = 0.693 \cdot (R_A + 2R_B) \cdot C\)</span>$</p>
+</li>
+<li>
+<p><strong>Frecuencia de Oscilación (<span class="arithmatex">\(f\)</span>):</strong>
+   $<span class="arithmatex">\(f = \frac{1}{T} = \frac{1.44}{(R_A + 2R_B) \cdot C}\)</span>$</p>
+</li>
+<li>
+<p><strong>Ciclo de Trabajo (<em>Duty Cycle</em>):</strong>
+   $<span class="arithmatex">\(\text{Duty (\%)} = \left( \frac{R_A + R_B}{R_A + 2R_B} \right) \times 100\%\)</span>$</p>
+</li>
+</ol>
+<hr />
+<h3 id="sustitucion-y-calculos-teoricos">Sustitución y Cálculos Teóricos</h3>
+<p>Dado:<br />
+<span class="arithmatex">\(R_A = 1\,\text{k}\Omega = 1,000\,\Omega\)</span><br />
+<span class="arithmatex">\(R_B = 10\,\text{k}\Omega = 10,000\,\Omega\)</span><br />
+<span class="arithmatex">\(C = 100\,\mu\text{F} = 100 \times 10^{-6}\,\text{F}\)</span><br />
+<span class="arithmatex">\(V_{CC} = 5.0\,\text{V}\)</span></p>
+<ol>
+<li>
+<p><strong>Frecuencia Teórica (<span class="arithmatex">\(f\)</span>):</strong>
+   $<span class="arithmatex">\(f = \frac{1.44}{(1000 + 20000) \times (100 \times 10^{-6})} = \frac{1.44}{21000 \times 10^{-4}} = \frac{1.44}{2.1} \approx 0.6857\,\text{Hz} \approx 0.69\,\text{Hz}\)</span>$</p>
+</li>
+<li>
+<p><strong>Ciclo de Trabajo Teórico (<span class="arithmatex">\(\text{Duty}\)</span>):</strong>
+   $<span class="arithmatex">\(\text{Duty} = \frac{1000 + 10000}{1000 + 20000} = \frac{11000}{21000} = \frac{11}{21} \approx 52.38\% \approx 52.4\%\)</span>$</p>
+</li>
+<li>
+<p><strong>Voltaje de Salida en ALTO (<span class="arithmatex">\(V_{OH}\)</span>):</strong><br />
+   Para la tecnología BJT interna del 555 estándar, la caída interna de transistor es de aprox. <span class="arithmatex">\(1.5\,\text{V}\)</span>:
+   $<span class="arithmatex">\(V_{OH\_teórico} = V_{CC} - 1.5\,\text{V} = 5.0\,\text{V} - 1.5\,\text{V} = 3.5\,\text{V}\)</span>$</p>
+</li>
+<li>
+<p><strong>Corriente del LED (<span class="arithmatex">\(I_{LED}\)</span>):</strong><br />
+   Asumiendo un diodo LED con voltaje en directo <span class="arithmatex">\(V_f \approx 2.0\,\text{V}\)</span>:
+   $<span class="arithmatex">\(I_{LED\_teórico} = \frac{V_{OH} - V_f}{R_{LED}} = \frac{3.5\,\text{V} - 2.0\,\text{V}}{330\,\Omega} = \frac{1.5\,\text{V}}{330\,\Omega} \approx 4.54\,\text{mA}\)</span>$</p>
+</li>
+</ol>
+<hr />
+<h2 id="4-tabla-comparativa-datos-teoricos-vs-medidos">4. Tabla Comparativa: Datos Teóricos vs. Medidos</h2>
+<p>El porcentaje de error se calcula mediante la fórmula:
+$<span class="arithmatex">\(\%\,\text{Error} = \left| \frac{\text{Valor Medido} - \text{Valor Teórico}}{\text{Valor Teórico}} \right| \times 100\%\)</span>$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Magnitud</th>
+<th style="text-align: center;">Teórico Calculado</th>
+<th style="text-align: center;">Medido Experimental</th>
+<th style="text-align: center;">Porcentaje de Error (%)</th>
+<th style="text-align: center;">Instrumento de Medición</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(V_{CC}\)</span> (V)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.00\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.051\,\text{V}\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(1.02\%\)</span></strong></td>
+<td style="text-align: center;">Multímetro</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><span class="arithmatex">\(V_{salida\_alto}\)</span> (V)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(3.50\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2.90\,\text{V}\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(17.14\%\)</span></strong></td>
+<td style="text-align: center;">Multímetro</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frecuencia (<span class="arithmatex">\(f\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(0.686\,\text{Hz}\)</span> (<span class="arithmatex">\(0.69\,\text{Hz}\)</span>)</td>
+<td style="text-align: center;"><span class="arithmatex">\(0.684\,\text{Hz}\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(0.29\%\)</span></strong></td>
+<td style="text-align: center;">Osciloscopio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ciclo de Trabajo (Duty)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(52.38\%\)</span> (<span class="arithmatex">\(52.4\%\)</span>)</td>
+<td style="text-align: center;"><span class="arithmatex">\(50.68\%\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(3.25\%\)</span></strong></td>
+<td style="text-align: center;">Osciloscopio</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Corriente LED (<span class="arithmatex">\(I_{LED}\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{V_{out} - V_f}{330} \approx 4.54\,\text{mA}\)</span></td>
+<td style="text-align: center;"><em>(Medición directa)</em></td>
+<td style="text-align: center;"><em>—</em></td>
+<td style="text-align: center;">Multímetro</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-explicacion-de-las-diferencias-teorico-vs-medido">5. Explicación de las Diferencias (Teórico vs. Medido)</h2>
+<ol>
+<li><strong>Frecuencia y Duty Cycle:</strong> Presentaron márgenes de error insignificantes (<span class="arithmatex">\(&lt;3.5\%\)</span>). Las mínimas discrepancias se deben a la <strong>tolerancia comercial de los componentes</strong> (los capacitores electrolíticos suelen presentar diferencias del <span class="arithmatex">\(\pm 10\%\)</span> a <span class="arithmatex">\(\pm 20\%\)</span> respecto a su valor nominal, y las resistencias un <span class="arithmatex">\(\pm 5\%\)</span>).</li>
+<li><strong>Voltaje de Salida en ALTO (<span class="arithmatex">\(V_{salida\_alto}\)</span>):</strong> Se observó un error del <span class="arithmatex">\(17.14\%\)</span> (<span class="arithmatex">\(2.9\,\text{V}\)</span> frente a <span class="arithmatex">\(3.5\,\text{V}\)</span>). Esto ocurre porque la caída interna de tensión de las etapas de salida del NE555 varía según la corriente consumida por la carga (en este caso el LED conectado al Pin 3). Al drenar corriente hacia el LED, la caída interna de los transistores NPN/PNP de la etapa de potencia aumenta, reduciendo la tensión disponible en el nodo de salida.</li>
+</ol>
+<hr />
+<h2 id="6-bitacora-de-errores">6. Bitácora de Errores</h2>
+<p>En el desarrollo práctico de los circuitos electrónicos es habitual enfrentarse a problemas técnicos de medición o montaje. A continuación se documenta la incidencia observada en el laboratorio:</p>
+<ul>
+<li><strong>a. ¿Qué falló?</strong><br />
+  Al momento de visualizar la señal de salida en la pantalla del osciloscopio, no se observaba una onda cuadrada limpia. En su lugar, aparecían únicamente <strong>picos/impulsos deformados</strong> (<em>spikes</em>) en las transiciones de carga y descarga, imposibilitando la lectura correcta de la frecuencia y el ciclo de trabajo.</li>
+<li><strong>b. ¿Cómo se encontró el problema?</strong><br />
+  Se realizó la inspección visual del trazo en pantalla junto con la verificación de los puntos de prueba (<em>probes</em>). Al notar que la forma de onda no correspondía con el comportamiento esperado del circuito astable y que la señal oscilaba de manera errática al mover la sonda, se identificó que la punta de prueba del osciloscopio estaba mal ubicada.</li>
+<li><strong>c. ¿Cómo se resolvió?</strong><br />
+  Se corrigió la posición del terminal positivo de la sonda del osciloscopio (conectándolo directamente al <strong>Pin 3 de salida del NE555</strong>) y asegurando que la <strong>pinza de tierra (GND)</strong> estuviera firmemente conectada a la referencia común del circuito de la protoboard. Tras este reacomodo y el ajuste del escalamiento horizontal/vertical (Time/Div y Volts/Div), la onda cuadrada se desplegó de forma estable y correcta en pantalla.</li>
+</ul>
+<hr />
+<h2 id="7-conclusiones">7. Conclusiones</h2>
+<ul>
+<li>Se comprobó experimentalmente el funcionamiento del temporizador NE555 en modo astable, logrando la oscilación continua y el parpadeo del LED a una frecuencia aproximada de <span class="arithmatex">\(0.68\,\text{Hz}\)</span>.</li>
+<li>La correlación entre la teoría matemática y los datos medidos en osciloscopio fue alta, obteniendo desviaciones menores al <span class="arithmatex">\(3.5\%\)</span> en frecuencia y ciclo de trabajo.</li>
+<li>El análisis de la bitácora de errores permitió afianzar el criterio técnico sobre la correcta colocación de las sondas de osciloscopio y la importancia del punto de referencia a tierra (GND) para obtener lecturas configuradas.</li>
+</ul>
+<h2 id="8-entregables-adjuntos-checklist-del-portafolio">8. Entregables Adjuntos (Checklist del Portafolio)</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Esquemático anotado:</strong> Diagrama del circuito con valores de <span class="arithmatex">\(R_A, R_B, C\)</span> explícitos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Fotos del montaje:</strong> Evidencia fotográfica de la implementación en protoboard.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Tabla de medición vs. teoría:</strong> Completada con \% de error e interpretaciones.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Mini-video (<span class="arithmatex">\(\le 60\text{ s}\)</span>):</strong> Grabación mostrando la onda en el osciloscopio y parpadeo del LED con voz en off.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Bitácora de errores:</strong> Sección 6 del presente reporte.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Imagenes:</strong> Sección 7 del presente reporte.</li>
+</ul>
+<p><img alt="Generador" loading="lazy" src="../../imagenes/generador.jpeg" />
+<img alt="Onda" loading="lazy" src="../../imagenes/onda.jpeg" />
+<img alt="Tinkercad" loading="lazy" src="../../imagenes/tinkercad.jpeg" /></p>
+<video width="320" height="240" controls>
+  <source src="video.mp4" type="video/mp4">
+</video>
+
+<h1 id="practica-extra-generacion-de-pulso-fijo-555-monoestable">Práctica EXTRA: Generación de Pulso Fijo (555 Monoestable)</h1>
+<h2 id="lista-de-entregables">📋 Lista de Entregables</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Fotos del montaje:</strong> Evidencia fotográfica de la implementación en protoboard.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Tabla de medición vs. teoría:</strong> Completada con % de error e interpretaciones.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Mini-video (<span class="arithmatex">\(\le 60\text{ s}\)</span>):</strong> Grabación mostrando la onda en el osciloscopio y el comportamiento del LED con voz en off.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Bitácora de errores:</strong> Sección 4 del presente reporte.</li>
+</ul>
+<hr />
+<h2 id="1-fundamento-teorico">1. 📐 Fundamento Teórico</h2>
+<p>En la configuración <strong>monoestable</strong>, el temporizador 555 genera un único pulso de salida de duración fija (<span class="arithmatex">\(T\)</span>) cuando recibe un pulso de disparo negativo <strong>(Trigger)</strong>.</p>
+<p>La duración del pulso depende exclusivamente del tiempo de carga del capacitor <span class="arithmatex">\(C\)</span> a través de la resistencia <span class="arithmatex">\(R_A\)</span>:</p>
+<div class="arithmatex">\[T = 1.1 \cdot R_A \cdot C\]</div>
+<hr />
+<h3 id="2-montaje-en-protoboard">2 Montaje en Protoboard</h3>
+<p><img alt="Protoboard" loading="lazy" src="../../imagenes/fotomono.jpeg" /></p>
+<hr />
+<h2 id="3-tabla-de-medicion-vs-teoria">3. 📊 Tabla de Medición vs. Teoría</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parámetro</th>
+<th style="text-align: center;">Valor Teórico</th>
+<th style="text-align: center;">Valor Medido</th>
+<th style="text-align: center;">Error Relativo (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tiempo de Pulso (<span class="arithmatex">\(T\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.164\text{ s}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5.400\text{ s}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4.57\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><em>Fórmula de Porcentaje de Error:</em></p>
+<div class="arithmatex">\[\% \text{ Error} = \left| \frac{\text{Valor Medido} - \text{Valor Teórico}}{\text{Valor Teórico}} \right| \times 100\]</div>
+<div class="arithmatex">\[\% \text{ Error} = \left| \frac{5.400 - 5.164}{5.164} \right| \times 100 \approx 4.57\%\]</div>
+<h3 id="explicacion-de-las-diferencias-margen-de-error">Explicación de las Diferencias (Margen de Error)</h3>
+<ul>
+<li><strong>Precisión en la toma del tiempo:</strong> La medición del tiempo real se realizó con un cronómetro y también analizando el video grabado de la práctica, por lo que no es <span class="arithmatex">\(100\%\)</span> precisa.</li>
+<li><strong>Error humano (error de dedo):</strong> Al medir manualmente el tiempo desde el video (iniciar y detener el cronómetro), existe un margen de imprecisión atribuible al tiempo de reacción o "error de dedo" al hacer clic.</li>
+<li><strong>Tolerancia de componentes:</strong> Las variaciones naturales en los valores reales de la resistencia y del capacitor respecto a sus valores nominales también influyen en la pequeña diferencia observada.</li>
+</ul>
+<hr />
+<h2 id="4-bitacora-de-errores">4. 🛠️ Bitácora de Errores</h2>
+<ul>
+<li><strong>¿Qué falló?:</strong><br />
+  Al presionar el botón de disparo al principio, el LED/pulso en la salida se apagaba de forma casi inmediata, lo cual no nos dejaba observar el retardo deseado. Esto ocurrió porque inicialmente utilizamos una resistencia muy baja (<span class="arithmatex">\(R_A = 1\text{ k}\Omega\)</span>), produciendo un pulso extremadamente corto e imperceptible:</li>
+</ul>
+<p>$<span class="arithmatex">\(T = 1.1 \cdot (1000\ \Omega) \cdot (10\ \mu\text{F}) \approx 0.011\text{ s} \quad (11\text{ ms, imperceptible visualmente})\)</span>$</p>
+<ul>
+<li>
+<p><strong>¿Cómo lo encontramos?:</strong><br />
+  Verificamos las conexiones físicas del circuito con el diagrama e identificamos que la configuración del temporizador estaba bien armada. Al no ver el resultado esperado, consultamos con el profesor (Osorio), quien afortunadamente se encontraba en el salón y nos ayudó observando el circuito. Nos explicó que debíamos aumentar el valor de la resistencia <span class="arithmatex">\(R_A\)</span> para ampliar la constante de tiempo <span class="arithmatex">\(RC\)</span>.</p>
+</li>
+<li>
+<p><strong>¿Cómo lo resolvimos?:</strong><br />
+  Sustituimos la resistencia de <span class="arithmatex">\(1\text{ k}\Omega\)</span> por una de <span class="arithmatex">\(47\text{ k}\Omega\)</span>. Al elevar la resistencia, el tiempo de pulso aumentó a aproximadamente <span class="arithmatex">\(0.5\text{ s}\)</span>, logrando un intervalo claramente visible desde que se soltaba el pulsador hasta que el LED se apagaba.</p>
+</li>
+</ul>
+<hr />
+<h2 id="5-video">5. Video</h2>
+<video width="320" height="240" controls>
+  <source src="videomal.mp4" type="video/mp4">
+</video>
+
+<video width="320" height="240" controls>
+  <source src="videomono.mp4" type="video/mp4">
+</video>
+
+<h2 id="nota-1-el-primer-video-es-de-cuando-nuestro-circuito-seguia-erroneo-no-estaba-mal-conectado-pero-el-valor-de-las-resistencias-hacia-que-nuestros-cambios-fueran-inmediatos-y-por-lo-tanto-imposibles-de-percibir-a-simple-vista">&gt; <strong>Nota 1:</strong> El primer video es de cuando nuestro circuito seguía "erróneo" (no estaba mal conectado pero el valor de las resistencias hacia que nuestros cambios fueran inmediatos y por lo tanto imposibles de percibir a simple vista).</h2>
+<blockquote>
+<p><strong>Nota 2:</strong> Mis videos por alguna razón no se reproducen bien, ya hemos intentado arreglar el problema pero persiste.</p>
+</blockquote>
+<h3 id="51-explicacion-videos">5.1 Explicación Videos</h3>
+<p>En este video mostramos la implementación del temporizador 555 en modo monoestable, cuya función es generar un pulso de duración fija al recibir un disparo manual.</p>
+<p>Al principio probamos con <span class="arithmatex">\(R_A = 1\text{ k}\Omega\)</span>, pero el pulso duraba milisegundos y no se apreciaba. Corregimos aumentando la resistencia a <span class="arithmatex">\(47\text{ k}\Omega\)</span>, lo que hizo visible el retardo.</p>
+<hr />
+<h2 id="6-conclusion">6. 📝 Conclusión</h2>
+<p>En esta práctica se comprobó exitosamente el funcionamiento del temporizador 555 en configuración monoestable para la generación de un pulso de duración fija mediante la activación por un botón. Se evidenció cómo la constante de tiempo dependerá directamente de los valores del circuito <span class="arithmatex">\(RC\)</span>, ya que al corregir el valor de la resistencia de <span class="arithmatex">\(1\text{ k}\Omega\)</span> a <span class="arithmatex">\(47\text{ k}\Omega\)</span> el retardo pasó de ser imperceptible a tener un intervalo claramente visible. Asimismo, el porcentaje de error de <span class="arithmatex">\(4.57\%\)</span> entre el valor teórico (<span class="arithmatex">\(5.164\text{ s}\)</span>) y el medido (<span class="arithmatex">\(5.4\text{ s}\)</span>) demostró ser completamente aceptable, respaldando la utilidad de este circuito en aplicaciones reales de retardos y filtrado antirrebote por hardware.</p>
+<p><strong>Se ocupó IA para darle formato a la práctica y agregar fórmulas</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
