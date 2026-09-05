@@ -97,3 +97,5 @@ Implementar el control de entradas y salidas digitales en un microcontrolador ab
 ## 6. 📝 Conclusión
 
 Mediante esta práctica se logró dominar la gestión de entradas y salidas digitales en microcontroladores. Se demostró la utilidad de la configuración `INPUT_PULLUP` para simplificar circuitos físicos y la importancia del uso de `millis()` para evitar bloquear el procesador. Finalmente, la comparativa del contador evidenció la necesidad del filtro de antirrebote por software para eliminar el ruido mecánico y garantizar lecturas 100% confiables en cualquier proyecto de electrónica.
+
+***Se utilizó inteligencia artificial para darle formato a la práctica**
