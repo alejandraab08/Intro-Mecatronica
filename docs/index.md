@@ -2,13 +2,13 @@
 
 **Equipo**:
 
- - Nombre integrante 1
- - Nombre integrante 2
+ - Alejandra Aguirre Beirana
+ - Ana Paola Gomez Jaramillo
 
 **Contacto**: 
 
-- Correo integrante 1
-- Correo integrante 2
+- 205744@iberopuebla.mx
+- 205598@iberopuebla.mx
 
 **Carrera**: Ingeniría Mecatrónica
 
