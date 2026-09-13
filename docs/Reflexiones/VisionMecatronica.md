@@ -1,5 +1,4 @@
-VISIÓN MECATRÓNICA ALE
-Hecho por Alejandra Aguirre Beirana
+
 
 Elegí ingeniería mecatrónica porque desde chica siempre fui muy curiosa y me interesaba mucho aprender cómo funcionaban las cosas, y mientras fui creciendo, me dí cuenta que podía descubrir eso sí entendía la ciencia detrás de los objetos. Por eso me puse a estudiar matemáticas, y después física, y después electrónica y después programación, y así seguía hasta que lograba tener una explicación lógica para las cosas que me hacían dudar. Así que cuando llegó el momento de escoger carrera, escogí mecatrónica porque sentí que era la opción que más me daba la libertad de seguir explorando y descubriendo cosas relacionadas a lo que me gusta hacer.
 
