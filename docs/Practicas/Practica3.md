@@ -1,26 +1,25 @@
 # Práctica 3: Motor DC, Puente H & Servomotor (ESP32)
 
 > **Asignatura:** Introducción a Mecatrónica  
-> **Hardware ocupado:** ESP32 DevKit V1, Driver TB6612 (Puente H), Motor DC TT con caja reductora, Servomotor SG90, Potenciómetro 10 kΩ, Fuente/batería externa para motores, Multímetro, Protoboard y jumpers.  
-> **Software ocupado:** Arduino IDE (código C++), WOKWI / Fritzing (esquemáticos y diagramas de conexión).
+> **Hardware ocupado:** ESP32 DevKit V1, Puente, Motor DC, Servomotor, Generador, Protoboard y jumpers.  
+> **Software ocupado:** Tinkercad
 
 ---
 
 ## 🎯 Objetivo General
 
-Implementar el control de actuadores mecatrónicos mediante un microcontrolador ESP32, abarcando el control de sentido de giro y velocidad mediante modulación por ancho de pulso (PWM) en un motor DC con driver TB6612, la medición de consumo de corriente en régimen transitorio y permanente, el posicionamiento preciso de un servomotor SG90 mediante cálculo de ciclo de trabajo (*duty cycle*), y la integración analógica de un potenciómetro vía ADC para el control en tiempo real.
+Implementar el control de actuadores mecatrónicos mediante un microcontrolador ESP32, abarcando el control de sentido de giro y velocidad mediante modulación por ancho de pulso (PWM) en un motor DC, la medición de consumo de corriente en régimen transitorio y permanente, y el posicionamiento preciso de un servomotor mediante cálculo de ciclo de trabajo (*duty*).
 
 ---
 
 ## 📋 Lista de Entregables
 
-- [x] **Práctica 1 Control del Motor DC (Dirección y PWM):** Inversión de giro (IN1/IN2) y variador de velocidad por PWM con al menos 3 niveles distintos, identificando el punto crítico de PWM mínimo de arranque.
-- [x] **Práctica 2 Prueba de Carga y Medición de Corriente:** Registro experimental con multímetro en serie del pico de corriente de arranque (*stall/inrush*) vs. régimen permanente en giro libre.
-- [x] **Práctica 3 Control Posicional de Servomotor:** Barrido y control angular preciso en 3 posiciones (0°, 90° y 180°) respaldado con la fundamentación matemática del *duty cycle*.
-- [x] **Práctica 4 EXTRA Control Analógico Vía ADC:** Regulación proporcional y continua de la velocidad del motor DC en tiempo real utilizando la lectura de un potenciómetro.
-- [x] **Bitácora de errores:** Análisis técnico de fallas comunes (tierras no compartidas, caída de voltaje, desbordamiento del ADC/PWM) y sus respectivas soluciones.
-- [x] **Evidencia Multimedia:** Fotografía de las conexiones y mini-video demostrativo del funcionamiento continuo del sistema.
-- [x] **Conclusión:** Resumen técnico sobre la eficiencia, desacoplamiento de potencia/control y respuesta de los actuadores.
+- [x] **1. Control del Motor DC (Dirección y PWM):** Inversión de giro y variador de velocidad por PWM con al menos 3 niveles distintos, identificando el punto crítico de PWM mínimo de arranque.
+- [x] **2. Prueba de Carga y Medición de Corriente:** Registro experimental con multímetro en serie del pico de corriente de arranque vs. en giro libre.
+- [x] **3.  Control Posicional de Servomotor:** Barrido y control angular preciso en 3 posiciones (0°, 90° y 180°) respaldado con la fundamentación matemática del *duty cycle*.
+- [x] **Bitácora de errores:** Análisis de fallas que tuvimos  y sus respectivas soluciones.
+- [x] **Evidencia Multimedia:** Fotografías de las conexiones y mini-video demostrativo del funcionamiento.
+- [x] **Conclusión:** Resumen de la práctica.
 
 ---
 
