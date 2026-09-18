@@ -34,7 +34,7 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: red
+      primary: blue
   features:
     - content.code.copy
     - content.tooltips
@@ -50,8 +50,12 @@ nav:
   - "Sobre Mí": SobreMi.md
   - "Prácticas":
       - "Practica 1": Practicas/Practica1.md
-      - "Practica 2": Practicas/práctica2.md
-  - "Proyectos":
-      - "Proyecto 1": Proyectos/Proyecto1.md
+      - "Practica 2": Practicas/Practica2.md
+      - "Practica 3": Practicas/Practica3.md
+  - "Proyecto de Ingeniería Alejandra":
+      - "Soldaduras": Proyecto de Ingeniería Alejandra/Soldaduras.md
+      - "Ensamblaje Solid Works": Proyecto de Ingeniería Alejandra/CuboSolidWorks.md
+      - "Modelado Solid Works": Proyecto de Ingeniería Alejandra/SolidWorksDiseño.md
+ 
   - "Reflexiones":
       - "Vision Mecatronica Alejandra": Reflexiones/VisionMecatronica.md
