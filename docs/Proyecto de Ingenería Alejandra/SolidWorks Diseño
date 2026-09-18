@@ -1,0 +1,94 @@
+# Reporte: Diseño y Modelado de Piezas en SolidWorks
+
+**Institución:** Universidad Iberoamericana Puebla  
+**Materia:** Proyecto de Ingeniería I  
+
+---
+
+## 1. Introducción 
+
+En esta clase se abordó el modelado tridimensional de componentes. El programa ocupado (SolidWorkss) permite diseñar, dimensionar y ensamblar piezas digitales para optimizar los procesos de manufactura, reducir errores de taller y garantizar la precisión de las geometrías antes de su elaboración.
+
+---
+
+## 2. Configuración del Entorno y Herramientas Base de SolidWorks
+
+El profesor Oliver comenzó por enseñarnos las herrmaientas y atajos básicos dentro del programa y la preparación del espacio de trabajo digital antes de empezar a trazar geometrías:
+
+* **Unidades de medida y plantilla:** Selección del sistema de unidades (MMGS: milímetro, gramo, segundo) y definición de los planos de diseño.
+* **Selección de planos (xyz):**
+  * *Plano Alzado / Planta / Vista lateral:* Para empezar a dibujar se debe escoger alguno de estos para saber la orientación que va a tomar la pieza.
+* **Herramientas de croquizado:**
+  * Uso de líneas, círculos, rectángulos, polígonos, etc para la definición de la geometría base.
+  * Aplicación de relaciones geométricas (coincidente, paralelo, perpendicular, tangente) para fijar el comportamiento del sketch.
+  * Cota inteligente para asignar las dimensiones exactas solicitadas.
+
+---
+
+## 3. Operaciones de Modelado 3D (Extrusión y Corte)
+
+Se explicaron las funciones principales para transformar los dibujos planos a objetos tridimensionales:
+
+1. **Extrusión de saliente/base:** Conversión del boceto 2D en un cuerpo 3D mediante la asignación de una profundidad específica.
+2. **Extrusión de corte:** Generación de perforaciones/cortes sobre las caras del sólido.
+3. **Extrusión por partes:** Darle volumen a una figura seleccionando sus partes (no hacerlo todo completo como en el punto n1).
+
+---
+
+## 4. Asignación de Materiales y Propiedades Físicas
+
+Una vez terminada la pieza, se procedió a seleccionar ciertas propiedades físicas de la pieza.
+
+- **Selección de materiales:** En esta parte se escoge el material de la biblioteca en SolidWroks para saber de cual material nuestro objeto va a estar hecho.
+- **Cálculo de propiedades:** Revisión para verificar la masa final, el volumen, la densidad, la superficie total del modelo, etc.
+
+---
+
+## 5. Desarrollo de la Práctica
+Durante la clase se pusieron en marcha las competencias de diseño digital para ambas figuras:
+1. Se analizó la pieza asignada para planear la secuencia de operaciones a realizar.
+2. Se trazó el croquis base restringiendo por completo sus dimensiones mediante cotas y relaciones hasta que la figura quedó completamente de color negro (lo cual significa que está correctamente restringida). *Figura 1*
+3. Se aplicaron las operaciones de extrusión (en azul) y los cortes necesarios hasta obtener el modelo tridimensional final. *Figuras 2-4*
+4. Se aplicó el material solicitado por el libro y se calculó la masa. *Figuras 5 y 6*
+
+### 5.1 Figuras Sección A Probelma 4
+
+![foto1](../imagenes/kiki(3).jpeg){loading=lazy}
+> Vista del primer boceto (la figura base plana)
+
+![foto2](../imagenes/kiki(4).jpeg){loading=lazy}
+> Muestra en color azul la primera extrusión de la figura
+
+![foto3](../imagenes/kiki(5).jpeg){loading=lazy}
+> Muestra la última extrusión extrusión  
+
+![foto4](../imagenes/kiki(6).jpeg){loading=lazy}
+> Remarca de color azul el corte del polígono al cilíndro 
+
+![foto5](../imagenes/kiki(2).jpeg){loading=lazy}
+> Vista del volumen terminado
+
+![foto6](../imagenes/kiki(1).jpeg){loading=lazy}
+> Muestra la figura con el material indicado, lo cual finaliza la pieza
+
+--- 
+
+### 5.2 Figuras Sección A Probelma 3
+
+![foto1](../imagenes/ki(2).jpeg){loading=lazy}
+> Vista del primer boceto (la figura base plana)
+
+![foto2](../imagenes/ki(4).jpeg){loading=lazy}
+> Muestra en color azul la primera extrusión de la figura
+
+![foto3](../imagenes/ki(5).jpeg){loading=lazy}
+> Muestra la última extrusión extrusión  
+
+![foto4](../imagenes/ki(6).jpeg){loading=lazy}
+> Remarca de color azul el corte del polígono al cilíndro 
+
+![foto5](../imagenes/ki(3).jpeg){loading=lazy}
+> Vista del volumen terminado
+
+![foto6](../imagenes/ki(1).jpeg){loading=lazy}
+> Muestra la figura con el material indicado, lo cual finaliza la pieza
