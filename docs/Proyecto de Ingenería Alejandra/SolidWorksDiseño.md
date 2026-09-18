@@ -53,44 +53,44 @@ Durante la clase se pusieron en marcha las competencias de diseño digital para 
 
 ### 5.1 Figuras Sección A Probelma 4
 
-![foto1](../imagenes/kiki(3).jpeg){loading=lazy}
+![foto1](../imagenes/kiki(3).png){loading=lazy}
 > Vista del primer boceto (la figura base plana)
 
-![foto2](../imagenes/kiki(4).jpeg){loading=lazy}
+![foto2](../imagenes/kiki(4).png){loading=lazy}
 > Muestra en color azul la primera extrusión de la figura
 
-![foto3](../imagenes/kiki(5).jpeg){loading=lazy}
+![foto3](../imagenes/kiki(5).png){loading=lazy}
 > Muestra la última extrusión extrusión  
 
-![foto4](../imagenes/kiki(6).jpeg){loading=lazy}
+![foto4](../imagenes/kiki(6).png){loading=lazy}
 > Remarca de color azul el corte del polígono al cilíndro 
 
-![foto5](../imagenes/kiki(2).jpeg){loading=lazy}
+![foto5](../imagenes/kiki(2).png){loading=lazy}
 > Vista del volumen terminado
 
-![foto6](../imagenes/kiki(1).jpeg){loading=lazy}
+![foto6](../imagenes/kiki(1).png){loading=lazy}
 > Muestra la figura con el material indicado, lo cual finaliza la pieza
 
 
 
 ### 5.2 Figuras Sección A Probelma 3
 
-![foto1](../imagenes/ki(2).jpeg){loading=lazy}
+![foto1](../imagenes/ki(2).png){loading=lazy}
 > Vista del primer boceto (la figura base plana)
 
-![foto2](../imagenes/ki(4).jpeg){loading=lazy}
+![foto2](../imagenes/ki(4).png{loading=lazy}
 > Muestra en color azul la primera extrusión de la figura
 
-![foto3](../imagenes/ki(5).jpeg){loading=lazy}
+![foto3](../imagenes/ki(5).png){loading=lazy}
 > Muestra la siguiente extrusión del cilindro más grande  
 
-![foto4](../imagenes/ki(6).jpeg){loading=lazy}
+![foto4](../imagenes/ki(6).png){loading=lazy}
 > Remarca en azul la extrusión del cilindro chico  
 
-![foto5](../imagenes/ki(3).jpeg){loading=lazy}
+![foto5](../imagenes/ki(3).png){loading=lazy}
 > Vista del volumen terminado
 
-![foto6](../imagenes/ki(1).jpeg){loading=lazy}
+![foto6](../imagenes/ki(1).png){loading=lazy}
 > Muestra la figura con el material indicado, lo cual finaliza la pieza
 
 
