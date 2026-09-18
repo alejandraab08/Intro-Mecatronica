@@ -71,7 +71,7 @@ Durante la clase se pusieron en marcha las competencias de diseño digital para 
 ![foto6](../imagenes/kiki(1).jpeg){loading=lazy}
 > Muestra la figura con el material indicado, lo cual finaliza la pieza
 
---- 
+
 
 ### 5.2 Figuras Sección A Probelma 3
 
@@ -82,10 +82,10 @@ Durante la clase se pusieron en marcha las competencias de diseño digital para 
 > Muestra en color azul la primera extrusión de la figura
 
 ![foto3](../imagenes/ki(5).jpeg){loading=lazy}
-> Muestra la última extrusión extrusión  
+> Muestra la siguiente extrusión del cilindro más grande  
 
 ![foto4](../imagenes/ki(6).jpeg){loading=lazy}
-> Remarca de color azul el corte del polígono al cilíndro 
+> Remarca en azul la extrusión del cilindro chico  
 
 ![foto5](../imagenes/ki(3).jpeg){loading=lazy}
 > Vista del volumen terminado
@@ -94,6 +94,7 @@ Durante la clase se pusieron en marcha las competencias de diseño digital para 
 > Muestra la figura con el material indicado, lo cual finaliza la pieza
 
 
+--- 
 ## 6. Conclusion
 
 En esta práctica se demonstró la utilidad de las herramientas fundamentales de SolidWorks para la creación de figuras 2D y 3D. La correcta aplicación de cotas inteligentes, relaciones y asignación de materiales permitió evaluar con precisión las propiedades físicas del modelo (masa, densidad, etc) y sentó las bases para el diseño y simulación de piezas mecánicas en futuros procesos.
