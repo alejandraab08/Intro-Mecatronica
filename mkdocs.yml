@@ -53,9 +53,9 @@ nav:
       - "Practica 2": Practicas/Practica2.md
       - "Practica 3": Practicas/Practica3.md
   - "Proyecto de Ingeniería Alejandra":
-      - "Soldaduras": Proyecto de Ingeniería Alejandra/Soldaduras.md
-      - "Ensamblaje Solid Works": Proyecto de Ingeniería Alejandra/CuboSolidWorks.md
-      - "Modelado Solid Works": Proyecto de Ingeniería Alejandra/SolidWorksDiseño.md
+      - "Soldaduras": Proyecto/Soldaduras.md
+      - "Ensamblaje Solid Works": Proyecto/CuboSolidWorks.md
+      - "Modelado Solid Works": Proyecto/SolidWorksDiseño.md
  
   - "Reflexiones":
       - "Vision Mecatronica Alejandra": Reflexiones/VisionMecatronica.md
