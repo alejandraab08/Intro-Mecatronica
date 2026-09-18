@@ -56,6 +56,7 @@ nav:
       - "Soldaduras": Proyecto/Soldaduras.md
       - "Ensamblaje Solid Works": Proyecto/CuboSolidWorks.md
       - "Modelado Solid Works": Proyecto/SolidWorksDiseño.md
+      - "Corte Láser": Proyecto/CorteLaser.md
  
   - "Reflexiones":
       - "Vision Mecatronica Alejandra": Reflexiones/VisionMecatronica.md
