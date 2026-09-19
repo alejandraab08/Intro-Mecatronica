@@ -47,10 +47,9 @@ Una vez creadas todas las partes, se procedió a la integración de las seis car
 
 ---
 ## 6. Fotos
-![Foto1](../imagenes/c(1).jpeg){loading=lazy}
-![Foto2](../imagenes/c(2).jpeg){loading=lazy}
-![Foto3](../imagenes/c(3).jpeg){loading=lazy}
-
+![Foto1](../imagenes/c(1).png){loading=lazy}
+![Foto2](../imagenes/c(2).png){loading=lazy}
+![Foto3](../imagenes/c(3).png){loading=lazy}
 
 --- 
 
