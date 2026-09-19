@@ -48,7 +48,7 @@ Bajo la supervisión del profesor Cholula y el Mtro. Oliver Ochoa en el IDIT, se
 ### Paso 2: Preparación de Materiales de Medición y EPP
 Se dispuso el EPP completo (pechera, guantes, careta) y los instrumentos de medición sobre la mesa de trabajo perforada antes de iniciar cualquier operación de corte o soldadura.
 
-![Herramientas y EPP](Imagenes/IMG_2204.jpg)
+![Herramientas y EPP](../Imagenes/IMG_2204.jpg)
 *Figura 2: Equipo de medición, limas de desbaste, careta y EPP alistados en la zona de máquinas.*
 .
 ---
