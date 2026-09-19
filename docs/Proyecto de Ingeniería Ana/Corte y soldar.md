@@ -1,16 +1,4 @@
-#include <iostream>
-#include <fstream>
-
-int main() {
-    std::ofstream reporte("Reporte_Corte_Esmerilado_Soldadura_IDIT.md");
-
-    if (!reporte.is_open()) {
-        std::cerr << "Error: No se pudo crear el archivo del reporte." << std::endl;
-        return 1;
-    }
-
-    reporte << R"(# Reporte de Práctica: Corte, Esmerilado y Soldadura por Arco con Generador
-
+## Reporte de la practica de corte y soldadura en el IDIT  
 **Institución:** Universidad Iberoamericana Puebla  
 **Departamento:** Ingenierías / Mecatrónica  
 **Asignatura:** Proyectos de Ingeniería  
@@ -121,3 +109,5 @@ Durante la sesión se analizaron los errores típicos de la soldadura por arco e
 
     return 0;
 }
+
+//se uso inteligencia artificial para la creacion del codigo
