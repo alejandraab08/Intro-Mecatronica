@@ -1,4 +1,5 @@
-## Reporte de la practica de corte y soldadura en el IDIT  
+# Reporte de Práctica: Corte, Esmerilado y Soldadura por Arco con Generador
+
 **Institución:** Universidad Iberoamericana Puebla  
 **Departamento:** Ingenierías / Mecatrónica  
 **Asignatura:** Proyectos de Ingeniería  
@@ -106,8 +107,3 @@ Durante la sesión se analizaron los errores típicos de la soldadura por arco e
     std::cout << " ¡EXITO! Reporte generado como 'Reporte_Corte_Esmerilado_Soldadura_IDIT.md'" << std::endl;
     std::cout << " Puedes abrirlo y previsualizarlo directamente en VS Code." << std::endl;
     std::cout << "============================================================" << std::endl;
-
-    return 0;
-}
-
-//se uso inteligencia artificial para la creacion del codigo
