@@ -50,7 +50,7 @@ Se dispuso el EPP completo (pechera, guantes, careta) y los instrumentos de medi
 
 ![Herramientas y EPP](Imagenes/IMG_2204.jpg)
 *Figura 2: Equipo de medición, limas de desbaste, careta y EPP alistados en la zona de máquinas.*
-
+.
 ---
 
 ### Paso 3: Corte Mecánico de Tubos Metálicos
