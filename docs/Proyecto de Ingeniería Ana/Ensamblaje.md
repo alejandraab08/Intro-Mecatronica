@@ -1,75 +1,96 @@
-// Comment Ana
+# Reporte de Práctica: Diseños en SolidWorks, Uniones Mecánicas y Bisagras Vivas
 
-#include <iostream>
-#include <fstream>
-#include <string>
-
-int main() {
-    std::ofstream reporte("Reporte_SolidWorks_Kerf_Bisagras.md");
-
-    if (!reporte.is_open()) {
-        std::cerr << "Error al crear el archivo del reporte." << std::endl;
-        return 1;
-    }
-
-    reporte << R"(# Reporte de Práctica: Diseño y Ensamblaje en SolidWorks para Corte Láser
-
-**Institución:** Universidad Iberoamericana / Departamento de Ingeniería / Mecatrónica  
-**Asignatura:** Manufactura Avanzada / CAD-CAM  
-**Software:** SolidWorks  
-**Proyecto:** Modelado de Piezas Ensamblables, Ajuste de Kerf y Bisagras Vivas  
+**Institución:** Universidad Iberoamericana Puebla  
+**Departamento:** Ingenierías / Mecatrónica  
+**Asignatura:** Proyectos de Ingeniería  
+**Ubicación:** Instituto de Diseño e Innovación Tecnológica (IDIT)  
+**Supervisión Académica:** Mtro. Oliver Ochoa (Coordinador de Carrera)  
 
 ---
 
 ## 1. Objetivos
 
-* **General:** Aprender el diseño paramétrico de piezas en SolidWorks orientadas al proceso de manufactura por cortadora láser.
+* **General:** Desarrollar habilidades de diseño CAD en SolidWorks orientadas a manufactura por corte láser, aplicando conceptos de ensamble mecánico macho-hembra, compensación de Kerf y flexibilidad mediante patrones de bisagras vivas.
 * **Específicos:**
-  1. Comprender el concepto de **Kerf** (sangría/ancho del haz láser) y su impacto en las tolerancias mecánicas y el ajuste de ensambles (macho-hembra).
-  2. Analizar la técnica de **bisagras vivas** (*lattice hinges* / *kerf bending*) para dotar de flexibilidad a materiales rígidos (como MDF o acrílico).
-  3. Desarrollar las bases para la modelación y ensamblaje del proyecto final: una ballena articulada con bisagras vivas.
+  1. Diseñar piezas cuadradas paramétricas con almenas y pestañas de ensamble a presión (*press-fit*).
+  2. Analizar los diferentes tipos de uniones mecánicas (ensambles a tope, a media madera, por almenas/dientes y uniones tipo chaveta).
+  3. Comprender el concepto de **Kerf** y calcular el *offset* dimensional requerido para garantizar el ajuste exacto de las piezas.
+  4. Explorar los diversos patrones de **bisagras vivas** (*lattice hinges*) para otorgar flexibilidad a materiales rígidos (MDF/acrílico) según su geometría.
 
 ---
 
-## 2. Conceptos Clave
+## 2. Marco Teórico y Conceptos Clave
 
-* **Kerf:** Es la cantidad de material que el haz del láser remueve o sublima al realizar un corte. Si no se compensa este grosor en el croquis CAD, las piezas ensamblables quedarán holgadas.
-* **Bisagras Vivas (Living Hinges):** Patrones de cortes intercalados en un material rígido que reducen su rigidez torsional y flexional, permitiendo que se doble sin romperse.
+### A. Tipos de Uniones Mecánicas para Corte Láser
+* **Uniones Dentadas (Almenas / Pestañas):** Acoplamientos macho-hembra en los bordes de los perfiles que distribuyen los esfuerzos de corte a lo largo del ensamble.
+* **Uniones T-Slot (Con Perno o Cuña):** Aseguran las caras tridimensionales utilizando un sujetador mecánico o cuña de presión.
+* **Compensación de Kerf:** El haz láser sublima un ancho de material (típicamente entre $0.10\text{ mm}$ y $0.20\text{ mm}$). En SolidWorks se aplica un *offset* hacia el exterior en los contornos macho para que el ensamble no quede holgado.
 
----
-
-## 3. Descripción de las Evidencias (Imágenes Provistas)
-
-|<img src="Imagenes/WhatsApp Image 2026-09-18 at 08.44.51.jpeg" width="400" alt="Disposición de Piezas"> | <img src="Imagenes/WhatsApp Image 2026-09-18 at 08.45.17.jpeg" width="400" alt="Modelado 3D"> |
-| :---: | :---: |
-| *Figura 1: Muestra la proyección 2D de múltiples placas cuadradas alineadas con almenas (dientes de ensamble).* | *Figura 2: Pieza extruida individual con su correspondiente grosor de material, lista para simular el ensamblaje.* |
-
-|<img src="Imagenes/WhatsApp Image 2026-09-18 at 08.45.08.jpeg" width="400" alt="Croquizado Paramétrico"> | <img src="Imagenes/WhatsApp Image 2026-09-18 at 08.45.01.jpeg" width="400" alt="Perspectiva 3D"> |
-| :---: | :---: |
-| *Figura 3: Muestra el boceto con cotas definidas ($50.00\text{ mm}$ de lado, $6.00\text{ mm}$ por diente y $3.00\text{ mm}$ de espesor).* | *Figura 4: Vista tridimensional de la pieza con relieve donde se aprecian los bordes dentados mecánicos.* |
+### B. Patrones de Bisagras Vivas (Living Hinges)
+Las bisagras vivas consisten en cortar patrones de celosía intercalados en una lámina rígida. La flexibilidad, el ángulo de doblado y la resistencia estructural cambian según el patrón seleccionado:
+* **Líneas Paralelas Intercaladas (Estándar):** Otorga un radio de curvatura amplio y flexión uniforme.
+* **Patrón Ondulado / Diamante:** Distribuye la tensión en múltiples direcciones, ideal para curvaturas complejas u orgánicas (como la estructura de una ballena articulada).
+* **Patrón de Panal (Hexagonal):** Brinda mayor rigidez torsional manteniendo cierta capacidad de flexión.
 
 ---
 
-## 4. Resumen de Pasos y Parámetros
+## 3. Desarrollo Experimental y Análisis de Evidencias CAD
 
-| Etapa | Operación | Parámetro / Resultado |
+Bajo la supervisión del Mtro. Oliver Ochoa, se desarrollaron los modelos paramétricos en SolidWorks analizando las cotas y la tolerancia de encaje.
+
+### Figura 1: Disposición y Plano de Ensambles 2D
+Se trazó la plantilla de placas cuadradas alineadas, incorporando almenas y pestañas en los bordes para optimizar el espacio de corte y preparar la fabricación en lote.
+
+![Vista de Plano y Disposición de Piezas](Imagenes/WhatsApp Image 2026-09-18 at 08.44.51.jpeg)
+*Figura 1: Proyección en plano 2D con la disposición organizada de los cuadrados dentados y pestañas de ensamble.*
+
+---
+
+### Figura 2: Extrusión Paramétrica de la Pieza
+Se realizó la operación de extrusión considerando el espesor nominal de la lámina de trabajo ($3.00\text{ mm}$), permitiendo validar el volumen tridimensional de la pieza individual.
+
+![Modelado 3D de Pieza Extruida](Imagenes/WhatsApp Image 2026-09-18 at 08.45.17.jpeg)
+*Figura 2: Pieza extruida tridimensionalmente en SolidWorks lista para pruebas de ensamble.*
+
+---
+
+### Figura 3: Acotado y Tolerancias en Croquis
+Se definieron las variables geométricas del croquis: base cuadrada de $50.00\text{ mm}$, profundidad de pestaña de $3.00\text{ mm}$ (igual al espesor del material) y ancho de almena de $6.00\text{ mm}$, aplicando el *offset* de Kerf.
+
+![Croquis Acotado en SolidWorks](Imagenes/WhatsApp Image 2026-09-18 at 08.45.08.jpeg)
+*Figura 3: Detalle de cotas paramétricas en el croquis 2D ($50.00\text{ mm}$ de lado y $6.00\text{ mm}$ por pestaña).*
+
+---
+
+### Figura 4: Perspectiva 3D y Verificación de Uniones
+Se inspeccionó el sólido en perspectiva isométrica para verificar que el relieve de los dientes no presentara colisiones antes de la simulación del ensamble tridimensional.
+
+![Vista Isométrica Tridimensional](Imagenes/WhatsApp Image 2026-09-18 at 08.45.01.jpeg)
+*Figura 4: Vista en perspectiva 3D mostrando los relieves dentados de la cara de ensamble.*
+
+---
+
+## 4. Resumen de Parámetros y Resultados
+
+| Etapa de Diseño | Operación en SolidWorks | Propósito Técnico |
 | :--- | :--- | :--- |
-| **1. Croquis 2D** | Definición paramétrica | $50.00 \times 50.00\text{ mm}$, Diente: $6.00\text{ mm}$, Espesor: $3.00\text{ mm}$ |
-| **2. Compensación** | Aplicación de Offset por Kerf | $+0.09\text{ mm}$ por borde (Kerf total de $0.18\text{ mm}$) |
-| **3. Flexibilidad** | Patrón de Bisagra Viva | Habilitado para otorgar curvatura al cuerpo de la ballena |
-| **4. Ensamblaje** | Extrusión y simulación 3D | Verificación de uniones macho-hembra a presión exacta |
+| **Geometry Base** | Croquis de $50.00 \times 50.00\text{ mm}$ | Establecer la dimensión estructural de la cara plana |
+| **Pestañas / Almenas** | Cortes/Extrusiones de $6.00\text{ mm}$ | Generar la unión mecánica macho-hembra |
+| **Ajuste por Kerf** | Offset exterior de $+0.09\text{ mm}$ | Evitar holguras y lograr ensamble a presión (*press-fit*) |
+| **Living Hinges** | Patrón de cortes intercalados | Permitir la curvatura de piezas rígidas para formas complejas |
 
 ---
 
 ## 5. Conclusiones
 
-1. El uso de cotas paramétricas en SolidWorks permite adaptar rápida y fácilmente las piezas al grosor real del material a cortar.
-2. La consideración del **Kerf** es fundamental en la etapa de modelado; si no se compensa, las holguras provocan que el ensamble quede flojo.
-3. La implementación de **bisagras vivas** rompe las limitaciones del corte 2D, permitiendo crear formas volumétricas complejas y orgánicas como la ballena.
+* Se aprendió a modelar geométricamente componentes en SolidWorks considerando de origen las limitaciones y tolerancias del proceso de manufactura sustractiva por láser.
+* La adecuada selección del patrón de bisagra viva permite transformar láminas rígidas planas en volúmenes tridimensionales flexibles y orgánicos.
+* Las sesiones supervisadas por el Mtro. Oliver Ochoa permitieron comprender la relación fundamental entre la teoría del modelado CAD, las tolerancias físicas (Kerf) y el ensamblaje mecánico real.
 )";
 
     reporte.close();
-    std::cout << "Reporte generado exitosamente como 'Reporte_SolidWorks_Kerf_Bisagras.md'." << std::endl;
-    return 0;
-}
     
+    std::cout << "============================================================" << std::endl;
+    std::cout << " ¡EXITO! Reporte generado como 'Reporte_SolidWorks_Uniones_Bisagras_IDIT.md'" << std::endl;
+    std::cout << " Puedes abrirlo y previsualizarlo directamente en VS Code." << std::endl;
+    std::cout << "============================================================" << std::endl;   
