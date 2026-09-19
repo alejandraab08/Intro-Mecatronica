@@ -1,0 +1,1338 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica2/">
+      
+      
+        <link rel="next" href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 3 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-3-motor-dc-puente-h-servomotor-esp32" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objetivo General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Lista de Entregables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamento-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 📐 Fundamento Teórico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lista-de-materiales-y-esquema-de-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🔌 Lista de Materiales y Esquema de Conexión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desarrollo-de-las-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 🧪 Desarrollo de las Prácticas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 🧪 Desarrollo de las Prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practica-1-direccion-y-velocidad-motor-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 1: Dirección y Velocidad (Motor DC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-2-prueba-de-carga-y-medicion-de-corriente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 2: Prueba de Carga y Medición de Corriente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-3-control-posicional-de-servomotor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 3: Control Posicional de Servomotor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-control-analogico-via-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EXTRA: Control Analógico Vía ADC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitacora-de-errores-y-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Bitácora de Errores y Soluciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soldaduras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CuboSolidWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/SolidWorksDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelado Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CorteLaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte Láser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Ana
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Ana
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte y soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Ensamblaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Laser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objetivo General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lista-de-entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Lista de Entregables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamento-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 📐 Fundamento Teórico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-lista-de-materiales-y-esquema-de-conexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🔌 Lista de Materiales y Esquema de Conexión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desarrollo-de-las-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 🧪 Desarrollo de las Prácticas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 🧪 Desarrollo de las Prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practica-1-direccion-y-velocidad-motor-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 1: Dirección y Velocidad (Motor DC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-2-prueba-de-carga-y-medicion-de-corriente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 2: Prueba de Carga y Medición de Corriente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practica-3-control-posicional-de-servomotor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Práctica 3: Control Posicional de Servomotor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extra-control-analogico-via-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EXTRA: Control Analógico Vía ADC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitacora-de-errores-y-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Bitácora de Errores y Soluciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-3-motor-dc-puente-h-servomotor-esp32">Práctica 3: Motor DC, Puente H &amp; Servomotor (ESP32)</h1>
+<blockquote>
+<p><strong>Asignatura:</strong> Introducción a Mecatrónica<br />
+<strong>Hardware ocupado:</strong> ESP32 DevKit V1, Puente, Motor DC, Servomotor, Generador, Protoboard y jumpers.<br />
+<strong>Software ocupado:</strong> Tinkercad</p>
+</blockquote>
+<hr />
+<h2 id="objetivo-general">🎯 Objetivo General</h2>
+<p>Implementar el control de actuadores mecatrónicos mediante un microcontrolador ESP32, abarcando el control de sentido de giro y velocidad mediante modulación por ancho de pulso (PWM) en un motor DC, la medición de consumo de corriente en régimen transitorio y permanente, y el posicionamiento preciso de un servomotor mediante cálculo de ciclo de trabajo (<em>duty</em>).</p>
+<hr />
+<h2 id="lista-de-entregables">📋 Lista de Entregables</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>1. Control del Motor DC (Dirección y PWM):</strong> Inversión de giro y variador de velocidad por PWM con al menos 3 niveles distintos, identificando el punto crítico de PWM mínimo de arranque.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>2. Prueba de Carga y Medición de Corriente:</strong> Registro experimental con multímetro en serie del pico de corriente de arranque vs. en giro libre.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>3.  Control Posicional de Servomotor:</strong> Barrido y control angular preciso en 3 posiciones (0°, 90° y 180°) respaldado con la fundamentación matemática del <em>duty cycle</em>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Bitácora de errores:</strong> Análisis de fallas que tuvimos  y sus respectivas soluciones.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Evidencia Multimedia:</strong> Fotografías de las conexiones y mini-video demostrativo del funcionamiento.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> <strong>Conclusión:</strong> Resumen de la práctica.</li>
+</ul>
+<hr />
+<h2 id="1-fundamento-teorico">1. 📐 Fundamento Teórico</h2>
+<ol>
+<li>
+<p><strong>Etapa de Potencia y Driver TB6612FNG:</strong><br />
+   Los pines GPIO del ESP32 entregan un máximo de 3.3V y corrientes muy bajas (~12 mA por pin), insuficientes para mover un motor DC directamente. Se utiliza el puente H integrando MOSFETs (TB6612) para conmutar la polaridad aplicada a la carga (dirección mediante lógica de control IN1/IN2) y aislar el circuito lógico de la corriente consumida por la etapa de potencia. Es imperativo mantener una <strong>malla de tierra común (GND unificado)</strong> entre la fuente externa y el ESP32 para fijar la misma referencia de voltaje.</p>
+</li>
+<li>
+<p><strong>Modulación por Ancho de Pulso (PWM) y PWM Mínimo:</strong><br />
+   El periférico PWM permite aproximar una señal analógica variando el ciclo de trabajo (<em>Duty Cycle</em>) de una señal cuadrada digital de alta frecuencia. En un motor DC, el voltaje promedio aplicado determina el par y la velocidad. Existe un <strong>PWM mínimo de arranque</strong>, que corresponde al ciclo de trabajo mínimo necesario para vencer el par de fricción estática e inductancia propia de los devanados del motor.</p>
+</li>
+<li>
+<p><strong>Análisis de Consumo Eléctrico (Corriente de Arranque vs. Giro Libre):</strong><br />
+   Al aplicar voltaje a un motor detenido, la fuerza contraelectromotriz (FCEM) es nula, provocando una demanda de corriente máxima limitada únicamente por la resistencia interna de la bobina. A medida que el rotor acelera, la FCEM aumenta proporcionalmente a la velocidad, reduciendo la corriente efectiva a un valor de régimen permanente (<em>giro libre</em>).</p>
+</li>
+<li>
+<p><strong>Control Posicional del Servomotor (SG90):</strong><br />
+   Los servomotores utilizan una señal PWM estandarizada a una frecuencia típica de 50 Hz (periodo de 20 ms). La posición angular (0° a 180°) se controla modificando la anchura del pulso activo, que comúnmente varía entre 0.5 ms (0°) y 2.5 ms (180°).</p>
+</li>
+</ol>
+<hr />
+<h2 id="2-lista-de-materiales-y-esquema-de-conexion">2. 🔌 Lista de Materiales y Esquema de Conexión</h2>
+<ul>
+<li><strong>ESP32 DevKit V1:</strong> Procesador y generador de señales PWM.</li>
+<li><strong>Driver TB6612FNG:</strong> Puente H MOSFET de alta eficiencia.</li>
+<li><strong>Motor DC TT con caja reductora:</strong> Carga inductiva principal.</li>
+<li><strong>Servomotor SG90:</strong> Actuador posicional de precisión.</li>
+<li><strong>Potenciómetro 10 kΩ:</strong> Divisor de tensión para entrada analógica.</li>
+<li><strong>Fuente externa de alimentación (6V - 9V / Pilas):</strong> Alimentación independiente para la etapa de potencia (VMot).</li>
+<li><strong>Multímetro digital:</strong> Configurado en escala de Amperios DC para medición en serie.</li>
+</ul>
+<hr />
+<h2 id="3-desarrollo-de-las-practicas">3. 🧪 Desarrollo de las Prácticas</h2>
+<h3 id="practica-1-direccion-y-velocidad-motor-dc">Práctica 1: Dirección y Velocidad (Motor DC)</h3>
+<ul>
+<li><strong>Descripción:</strong> Se implementó el control de un motor DC a través del puente H TB6612 accionado por el ESP32. Mediante dos pines digitales (IN1 e IN2) se define el sentido de giro (CW / CCW / Freno). La velocidad se gestiona mediante un pin habilitador (PWM/PWMa) configurado con el periférico <code>ledc</code> del ESP32. Se varió el ciclo de trabajo en tres escalones programados (ej. 30%, 65% y 100%). Durante la caracterización inicial, se identificó experimentalmente el <strong>PWM mínimo de arranque</strong> incrementando gradualmente el ciclo de trabajo desde 0 hasta romper la inercia del motor.</li>
+</ul>
+<h3 id="practica-2-prueba-de-carga-y-medicion-de-corriente">Práctica 2: Prueba de Carga y Medición de Corriente</h3>
+<ul>
+<li><strong>Descripción:</strong> Se interrumpió la línea positiva de la fuente de alimentación externa que alimenta el motor para intercalar las puntas del multímetro configurado en medición de corriente directa. Se registraron dos estados críticos:</li>
+<li><strong>Corriente de arranque (<em>Inrush/Stall Current</em>):</strong> Pico instantáneo de corriente demandado en el milisegundo exacto en que el motor pasa del reposo al movimiento.</li>
+<li><strong>Corriente en giro libre (<em>No-load Current</em>):</strong> Valor en estado estable mientras el motor gira a máxima velocidad nominal sin carga mecánica en el eje.</li>
+<li><strong>Comparativa:</strong> La corriente de arranque resultó considerablemente mayor a la corriente de giro libre debido a la ausencia de fuerza contraelectromotriz al inicio del movimiento y al esfuerzo necesario para vencer la inercia y fricción estática del sistema mecánico.</li>
+</ul>
+<h3 id="practica-3-control-posicional-de-servomotor">Práctica 3: Control Posicional de Servomotor</h3>
+<ul>
+<li><strong>Descripción:</strong> Se conectó la línea de señal del servomotor SG90 a un pin GPIO configurado para PWM a 50 Hz. Se programó una rutina de control para llevar el eje de forma secuencial a las posiciones de 0°, 90° y 180°. </li>
+<li><strong>Cálculo de <em>Duty Cycle</em>:</strong>
+  Tomando como referencia un periodo total <span class="arithmatex">\(T = 20\text{ ms}\)</span> (50 Hz) y una resolución de 16 bits (<span class="arithmatex">\(2^{16} = 65536\)</span> cuentas):</li>
+<li><strong>Posición 0° (<span class="arithmatex">\(T_{\text{ON}} = 0.5\text{ ms}\)</span>):</strong><br />
+    $<span class="arithmatex">\(\text{Duty}\% = \left(\frac{0.5\text{ ms}}{20\text{ ms}}\right) \times 100 = 2.5\% \quad \longrightarrow \quad \text{Valor Registros} = 65536 \times 0.025 = 1638\text{ cuentas}\)</span>$</li>
+<li><strong>Posición 90° (<span class="arithmatex">\(T_{\text{ON}} = 1.5\text{ ms}\)</span>):</strong><br />
+    $<span class="arithmatex">\(\text{Duty}\% = \left(\frac{1.5\text{ ms}}{20\text{ ms}}\right) \times 100 = 7.5\% \quad \longrightarrow \quad \text{Valor Registros} = 65536 \times 0.075 = 4915\text{ cuentas}\)</span>$</li>
+<li><strong>Posición 180° (<span class="arithmatex">\(T_{\text{ON}} = 2.5\text{ ms}\)</span>):</strong><br />
+    $<span class="arithmatex">\(\text{Duty}\% = \left(\frac{2.5\text{ ms}}{20\text{ ms}}\right) \times 100 = 12.5\% \quad \longrightarrow \quad \text{Valor Registros} = 65536 \times 0.125 = 8192\text{ cuentas}\)</span>$</li>
+</ul>
+<h3 id="extra-control-analogico-via-adc">EXTRA: Control Analógico Vía ADC</h3>
+<ul>
+<li><strong>Descripción:</strong> Se conectó un potenciómetro de 10 kΩ a una entrada analógica del ESP32 (ADC1). El código toma el valor leído de 12 bits (0 - 4095) y utiliza la función de mapeo proporcional <code>map()</code> para escalar dicho rango al rango del PWM (0 - 255 u 0 - 1023 según la resolución configurada). De este modo, la velocidad del motor DC se ajusta de manera fluida y en tiempo real mediante el giro físico de la perilla, reemplazando las velocidades fijas parametrizadas por software.</li>
+</ul>
+<hr />
+<h2 id="bitacora-de-errores-y-soluciones">🛠️ Bitácora de Errores y Soluciones</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Problema observado</th>
+<th style="text-align: left;">Causa raíz técnica</th>
+<th style="text-align: left;">Solución aplicada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>El motor hace un zumbido pero no gira en valores bajos de PWM.</strong></td>
+<td style="text-align: left;">El valor de PWM aplicado genera un voltaje promedio inferior al necesario para vencer el par de fricción estática del motor.</td>
+<td style="text-align: left;">Se determinó la umbral del <strong>PWM mínimo de arranque</strong> y se limitó por software el rango inferior de salida para no operar por debajo de este valor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Comportamiento errático del servomotor o reinicios del ESP32 (Brownout).</strong></td>
+<td style="text-align: left;">Se alimentaron los actuadores directamente de los pines del ESP32/USB, generando caídas de voltaje severas por consumo de corriente.</td>
+<td style="text-align: left;">Se separó la alimentación: fuente externa dedicada para motores/servo y <strong>unión estricta de las tierras (GND común)</strong> entre circuitos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>El motor gira en un solo sentido sin responder a las señales.</strong></td>
+<td style="text-align: left;">Pin de activación/standby (<code>STBY</code>) del driver TB6612 flotante o desconectado.</td>
+<td style="text-align: left;">Se conectó el pin <code>STBY</code> permanentemente a 3.3V para habilitar los canales lógicos del circuito integrado.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conclusiones">📝 Conclusiones</h2>
+<ul>
+<li>La utilización de un puente H como el <strong>TB6612</strong> resulta indispensable para desacoplar de forma segura la etapa de control digital del ESP32 de los picos de corriente y el ruido inductivo generados por los motores de corriente directa.</li>
+<li>La caracterización experimental del consumo eléctrico confirmó que la corriente de arranque es significativamente mayor que la de giro libre, un factor crítico que se debe considerar al dimensionar fuentes de alimentación y protecciones térmicas en proyectos mecatrónicos.</li>
+<li>El uso de periféricos PWM en el ESP32 permite una flexibilidad muy alta tanto para el control de velocidad mediante modulación por ancho de pulso como para la generación de pulsos de temporización exacta en servomotores mediante el cálculo preciso del ciclo de trabajo (<em>duty cycle</em>).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
