@@ -1,96 +1,76 @@
-# Reporte de Práctica: Operación de Cortadora LáserKerfustrial, Gestión de Kerf e Importación CAD
-
+# Reporte de Laboratorio: Puesta en Marcha y Operación de Cortadora Láser Industrial
 **Institución:** Universidad Iberoamericana Puebla  
 **Departamento:** Ingenierías / Mecatrónica  
 **Asignatura:** Proyectos de Ingeniería  
-**Ubicación:** Instituto de Diseño e Innovación Tecnológica (IDIT)  
-**Equipo:** Cortadora Láser Industrial CAMFive (Modelo CFL-CMA1390T)  
-**Software:** SmartCanvas / SolidWorks  
+**Ubicación:** Instituto de Diseño e Innovación Tecnológica (IDIT)
 
 ---
 
 ## 1. Objetivos
-
-* **General:** Operar la cortadora láser industrial CAMFive desde el protocolo de encendido hasta la ejecución del trabajo, comprendiendo la influencia del Kerf y las propiedades del material en la precisión dimensional.
-* **Específicos:**
-  1. Identificar el protocolo de encendido, uso de la llave de seguridad, enclavamiento de la tapa y requerimiento del Dongle USB para el software SmartCanvas.
-  2. Analizar el desglose procedimental de los videos de la práctica (encendido, validación, edición de vectores, importación `.DXF` y asignación de parámetros por capa).
-  3. Comprender el concepto de **Kerf** (sangría de quemado) y su relación directa con el espesor, densidad y punto de sublimación/combustión del material.
-  4. Documentar el flujo de trabajo mediante el análisis de evidencias visuales e importación de vectores CAD.
+* Comprender el protocolo de encendido y operación segura de una cortadora láser de grado industrial (CAMFive CFL-CMA1390T).
+* Dominar la interfaz del software *SmartCut*, desde el uso de la llave física de licencia hasta la importación y edición de vectores (`.DXF`) y texto.
+* Configurar parámetros de potencia y velocidad según el tipo de capa (corte o grabado).
+* Analizar el concepto de *kerf* (sangría de corte), su variación en función del material y su impacto en la precisión dimensional del proyecto.
 
 ---
 
-## 2. Marco Teórico: El Kerf y su Relación con el Material
+## 2. Marco Teórico: El Kerf y su Relación con los Materiales
 
-El **Kerf** es el ancho del material que el haz láser remueve o sublima al realizar un corte. No es una constante fija; varía según la física del proceso y las propiedades del material procesado:
+El **kerf** (o sangría) es el ancho del material que el haz láser evapora o remueve al momento de realizar un corte. Aunque el láser se percibe como un punto sin grosor, en la práctica el haz focalizado tiene un diámetro finito.
 
-* **Relación con el Tipo de Material:**
-  * **MDF y Maderas:** Requieren mayor potencia debido a su densidad orgánica, lo que genera un Kerf más amplio ($0.15\text{ mm} - 0.22\text{ mm}$) por quemado de fibras.
-  * **Acrílico (PMMA):** El láser funde y vaporiza el polímero dejando un borde pulido. Su Kerf es más estrecho y definido ($0.10\text{ mm} - 0.15\text{ mm}$).
-  * **Polimeros y Cartones:** Tienen puntos de sublimación bajos; un exceso de potencia ensancha el Kerf descontroladamente.
-* **Importancia Dimensional:** Si se diseña un ensamble macho-hembra de $3.00\text{ mm}$ sin compensar el Kerf en el CAD (*offset* exterior), las piezas quedarán holgadas y no mantendrán un ajuste a presión (*press-fit*).
+### Factores que afectan el Kerf:
+1. **Tipo de Material:** Materiales con mayor conductividad térmica o menor punto de sublimación (como ciertos polímeros o acrílicos) tienden a presentar un kerf ligeramente mayor que materiales densos como el MDF o la madera.
+2. **Espesor del Material:** A mayor grosor, se requiere mayor energía o menor velocidad, lo que incrementa la zona afectada por el calor.
+3. **Potencia y Velocidad:** Una mayor potencia o velocidad reducida aumentan la cantidad de energía depositada por unidad de longitud, ensanchando la sangría.
+4. **Lente y Distancia Focal:** La distancia focal del lente determina el tamaño del punto de enfoque (*spot size*); un punto más pequeño produce un kerf más angosto.
 
----
-
-## 3. Desglose del Procedimiento Basado en Evidencia en Video
-
-### Video 1: Encendido Físico y Verificación de Componentes (00:00 - 01:24)
-Se inicia el protocolo girando la llave de seguridad y accionando el interruptor general. Se revisa la estructura de los dos cabezales de corte y se verifica que la tapa superior esté totalmente cerrada. La máquina cuenta con un sensor interlock de seguridad que impide la emisión del haz láser si la tapa se encuentra abierta.
-
-### Video 2: Validación de Licencia y Comunicación con SmartCanvas (00:00 - 00:32)
-Se inserta la memoria USB de protección (llave Dongle) en la estación de trabajo. Al iniciar SmartCanvas, el programa autentica la licencia física. Sin este hardware, el software no habilita la comunicación ni el control de la cortadora industrial CAMFive.
-
-### Video 3: Manipulación Vectorial y Edición en Galería (00:00 - 01:42)
-Dentro del área de trabajo de SmartCanvas, se organizan vectores de piezas con ensambles, textos y patrones de flexibilidad. Se ejecutan transformaciones básicas como escalado, rotación, duplicación y organización de mapas de corte.
-
-### Video 4: Importación Correcta de Archivos `.DXF` (00:00 - 00:29)
-Se accede al menú `File > Import` para cargar el diseño exportado desde SolidWorks. Se enfatiza la verificación de las unidades de importación en **milímetros (mm)** para evitar errores de escala global en la geometría.
-
-### Video 5: Asignación de Parámetros por Capas de Color (00:00 - 00:11)
-En el panel *Layer Parameters*, se asignan valores de velocidad (*Work Speed*) y potencia (*Max/Min Power*) según el color del trazo: asignando baja potencia y alta velocidad para grabado/marcado, y mayor potencia con menor velocidad para corte completo.
+### Importancia en Ingeniería:
+En proyectos de ingeniería donde se requieren ensambles a presión (*press-fit*), engranajes o tolerancias estrechas, **no compensar el kerf resulta en piezas holgadas o fuera de especificación**. Si el láser corta exactamente sobre la línea teórica del vector, el resultado final será más pequeño que el diseño original por un valor igual a la mitad del kerf en cada borde ($\frac{kerf}{2}$). Por ello, en el software o en el diseño se debe aplicar un desfase (*offset*) exterior para mantener las dimensiones reales deseadas.
 
 ---
 
-## 4. Análisis de Evidencias e Imágenes del Repositorio
+## 3. Registro Audiovisual y Descripción de Procedimientos
 
-### Figura 1: Disposición 2D de Placas Dentadas
-Muestra la organización en plano de piezas cuadradas con almenas. Se observa la estrategia de acomodo para optimizar el área del material y minimizar el desperdicio.
+A continuación se detalla la documentación técnica en video integrada en la estructura del repositorio local.
 
-![Disposición 2D de Piezas](Imagenes/WhatsApp Image 2026-09-18 at 08.44.51.jpeg)
-*Figura 1: Organización vectorial en plano 2D de placas dentadas para corte eficiente.*
+### Video 1: Inicialización del Software SmartCut e Importación de Archivo
+* **Descripción:** En este segmento se muestra la apertura del programa *SmartCut* en la computadora del laboratorio. Se realiza la inserción de la memoria USB que contiene la licencia/llave de permisos para habilitar las funciones de comunicación con la máquina. Posteriormente, se efectúa la importación de un archivo vectorial en formato `.DXF`.
 
----
-
-### Figura 2: Extrusión y Simulación del Espesor
-Representación en 3D de la pieza extruida a $3.00\text{ mm}$. Permite visualizar el espesor real del material antes de enviar el archivo al software de control láser.
-
-![Pieza 3D Extruida](Imagenes/WhatsApp Image 2026-09-18 at 08.45.17.jpeg)
-*Figura 2: Modelo 3D con extrusión simulada del volumen del material.*
+<video src="./videos/video1.mp4" controls width="100%"></video>
 
 ---
 
-### Figura 3: Croquis Acotado y Tolerancia por Kerf
-Muestra las cotas paramétricas ($50.00\text{ mm}$ de contorno y $6.00\text{ mm}$ por diente). En esta etapa se define el *offset* de compensación para absorción del Kerf.
+### Video 2: Ajuste de Unidades, Escalado y Edición de Piezas
+* **Descripción:** Demostración de la verificación de unidades dentro del software, asegurando que el espacio de trabajo esté configurado en milímetros ($mm$). Se observa el procedimiento para verificar dimensiones reales de las piezas importadas, así como la duplicación y acomodo de elementos sobre el lienzo de trabajo para optimizar el área del material.
 
-![Croquis Paramétrico Acotado](Imagenes/WhatsApp Image 2026-09-18 at 08.45.08.jpeg)
-*Figura 3: Detalle de acotación paramétrica para control de dimensiones.*
-
----
-
-### Figura 4: Isométrico 3D de uniones
-Vista tridimensional en perspectiva que permite validar los relieves de los dientes y pestañas donde el haz láser realizará las trayectorias de corte vertical.
-
-![Vista Isométrica Tridimensional](Imagenes/WhatsApp Image 2026-09-18 at 08.45.01.jpeg)
-*Figura 4: Vista tridimensional de la pieza con relieve dentado.*
+<video src="./videos/video2.mp4" controls width="100%"></video>
 
 ---
 
-## 5. Resumen de Parámetros y Protocolo
+### Video 3: Inserción de Texto y Asignación de Capas de Grabado/Corte
+* **Descripción:** Explicación del proceso para agregar texto directamente en la plataforma, edición de tipografías y el procedimiento para clasificar geometrías mediante colores de capa. Esto permite diferenciar operacionalmente qué elementos se procesarán como grabado vectorial y cuáles como corte.
 
-| Etapa | Operación Clave | Condición / Parámetro |
-| :--- | :--- | :--- |
-| **1. Seguridad** | Verificación de encendido | Llave activada y Tapa protectora cerrada |
-| **2. Software** | Verificación de licencia | Dongle USB conectado en la PC |
+<video src="./videos/video3.mp4" controls width="100%"></video>
+
+---
+
+### Video 4: Configuración de Parámetros de Operación (Potencia y Velocidad)
+* **Descripción:** Ajuste técnico de la velocidad de desplazamiento ($\frac{mm}{s}$) y el porcentaje de potencia máxima del tubo láser para cada capa de color. Se enfatiza cómo la selección de estos valores determina la profundidad del grabado o la capacidad de atravesar el material de trabajo sin quemar las aristas.
+
+<video src="./videos/video4.mp4" controls width="100%"></video>
+
+---
+
+### Video 5: Puesta en Marcha Física de la Cortadora Láser
+* **Descripción:** Demostración en la cortadora láser industrial CAMFive (Modelo CFL-CMA1390T). Muestra el encendido del sistema general, el uso de la llave física de seguridad, la calibración y movimiento de los cabezales desde el panel de control, y la indicación obligatoria de mantener la cubierta de protección cerrada durante el envío y ejecución del archivo.
+
+<video src="./videos/video5.mp4" controls width="100%"></video>
+
+---
+
+## 4. Conclusiones
+* La correcta secuenciación desde la preparación del vector en *SmartCut* hasta el encendido físico de la máquina asegura un proceso eficiente y previene accidentes de laboratorio.
+* El análisis del *kerf* es indispensable en la manufactura con láser: el tipo de material impone límites físicos que deben compensarse en el software de diseño para garantizar la precisión dimensional de los componentes.
 | **3. Importación** | Carga de vectores CAD | Formato `.DXF` configurado en milímetros (`mm`) |
 | **4. Ajuste Kerf** | Compensación en trazado | Offset de $+0.08\text{ mm}$ a $+0.10\text{ mm}$ según material |
 | **5. Ejecución** | Configuración por capas | Control de Potencia (Max/Min %) y Velocidad ($\text{mm/s}$) |
@@ -106,7 +86,4 @@ Vista tridimensional en perspectiva que permite validar los relieves de los dien
 
     reporte.close();
     
-    std::cout << "============================================================" << std::endl;
-    std::cout << " ¡EXITO! Reporte generado como 'Reporte_Cortadora_Laser_Industrial_IDIT.md'" << std::endl;
-    std::cout << " Puedes abrirlo y previsualizarlo directamente en VS Code." << std::endl;
-    std::cout << "============================================================" << std::endl;
+   
