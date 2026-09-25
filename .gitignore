@@ -2,3 +2,5 @@
 site/
 *.pyc
 .venv/
+Imagenes/*.MOV
+Imagenes/*.MOV

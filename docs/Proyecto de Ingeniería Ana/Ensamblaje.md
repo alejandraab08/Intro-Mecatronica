@@ -49,7 +49,7 @@ Se trazó la plantilla de placas cuadradas alineadas, incorporando almenas y pes
 ### Figura 2: Extrusión Paramétrica de la Pieza
 Se realizó la operación de extrusión considerando el espesor nominal de la lámina de trabajo ($3.00\text{ mm}$), permitiendo validar el volumen tridimensional de la pieza individual.
 
-![Modelado 3D de Pieza Extruida](Imagenes/WhatsApp Image 2026-09-18 at 08.45.17.jpeg)
+![Modelado 3D de Pieza Extruida](piezas.png)
 *Figura 2: Pieza extruida tridimensionalmente en SolidWorks lista para pruebas de ensamble.*
 
 ---

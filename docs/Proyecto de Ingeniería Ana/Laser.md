@@ -36,35 +36,39 @@ A continuación se detalla la documentación técnica en video integrada en la e
 ### Video 1: Inicialización del Software SmartCut e Importación de Archivo
 * **Descripción:** En este segmento se muestra la apertura del programa *SmartCut* en la computadora del laboratorio. Se realiza la inserción de la memoria USB que contiene la licencia/llave de permisos para habilitar las funciones de comunicación con la máquina. Posteriormente, se efectúa la importación de un archivo vectorial en formato `.DXF`.
 
-<video src="./videos/video1.mp4" controls width="100%"></video>
+![video1](../../Imagenes/Video1.zip)
 
 ---
 
 ### Video 2: Ajuste de Unidades, Escalado y Edición de Piezas
 * **Descripción:** Demostración de la verificación de unidades dentro del software, asegurando que el espacio de trabajo esté configurado en milímetros ($mm$). Se observa el procedimiento para verificar dimensiones reales de las piezas importadas, así como la duplicación y acomodo de elementos sobre el lienzo de trabajo para optimizar el área del material.
 
-<video src="./videos/video2.mp4" controls width="100%"></video>
+![video2](../../Imagenes/video2.zip)
+
 
 ---
 
 ### Video 3: Inserción de Texto y Asignación de Capas de Grabado/Corte
 * **Descripción:** Explicación del proceso para agregar texto directamente en la plataforma, edición de tipografías y el procedimiento para clasificar geometrías mediante colores de capa. Esto permite diferenciar operacionalmente qué elementos se procesarán como grabado vectorial y cuáles como corte.
 
-<video src="./videos/video3.mp4" controls width="100%"></video>
+![video3](../../Imagenes/video3.zip)
+
 
 ---
 
 ### Video 4: Configuración de Parámetros de Operación (Potencia y Velocidad)
 * **Descripción:** Ajuste técnico de la velocidad de desplazamiento ($\frac{mm}{s}$) y el porcentaje de potencia máxima del tubo láser para cada capa de color. Se enfatiza cómo la selección de estos valores determina la profundidad del grabado o la capacidad de atravesar el material de trabajo sin quemar las aristas.
 
-<video src="./videos/video4.mp4" controls width="100%"></video>
+![video4](../../Imagenes/video4.zip)
+
 
 ---
 
 ### Video 5: Puesta en Marcha Física de la Cortadora Láser
 * **Descripción:** Demostración en la cortadora láser industrial CAMFive (Modelo CFL-CMA1390T). Muestra el encendido del sistema general, el uso de la llave física de seguridad, la calibración y movimiento de los cabezales desde el panel de control, y la indicación obligatoria de mantener la cubierta de protección cerrada durante el envío y ejecución del archivo.
 
-<video src="./videos/video5.mp4" controls width="100%"></video>
+
+![video5](../../Imagenes/video5.zip)
 
 ---
 

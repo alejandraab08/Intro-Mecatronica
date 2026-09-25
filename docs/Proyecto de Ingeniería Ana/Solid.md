@@ -26,12 +26,18 @@
 * **Guantes de Carnaza para Soldador:** Aislamiento térmico y eléctrico para la manipulación de piezas e hilo electrodo.
 * **Careta para Soldar (Sombra Variable):** Protección contra radiación ultravioleta/infrarroja e intensidad lumínica del arco eléctrico.
 * **Botas de Casquillo y Ropa de Algodón:** Seguridad operativa obligatoria en el área de máquinas.
+![material](../../Imagenes/careta.png)
+![materia](../../Imagenes/yomateria.png)
+
 
 ### Equipos y Materiales de Taller
 * **Generador de Corriente / Fuente de Potencia:** Equipo trifásico para suministro eléctrico regulado.
 * **Máquina de Soldar por Arco Eléctrico y Porta-electrodo:** Con electrodos revestidos ajustados a la corriente requerida.
 * **Tronzadora de Disco Abrasivo:** Cortadora sensitiva para perfiles tubulares de metal.
 * **Herramientas de Desbaste y Medición:** Limas metálicas planas, escuadra combinada Truper, regla y mesa de trabajo perforada para ensamble.
+
+![Generador](../../Imagenes/generador.png)
+
 
 ---
 
@@ -48,7 +54,7 @@ Bajo la supervisión del profesor Cholula y el Mtro. Oliver Ochoa en el IDIT, se
 ### Paso 2: Preparación de Materiales de Medición y EPP
 Se dispuso el EPP completo (pechera, guantes, careta) y los instrumentos de medición sobre la mesa de trabajo perforada antes de iniciar cualquier operación de corte o soldadura.
 
-![Herramientas y EPP](../Imagenes/IMG_2204.jpg)
+![Herramientas y EPP](../Imagenes/seguridad.png)
 *Figura 2: Equipo de medición, limas de desbaste, careta y EPP alistados en la zona de máquinas.*
 .
 ---
@@ -56,7 +62,7 @@ Se dispuso el EPP completo (pechera, guantes, careta) y los instrumentos de medi
 ### Paso 3: Corte Mecánico de Tubos Metálicos
 Se fijó el perfil tubular metálico en la prensa de la tronzadora. Se ejecutaron cortes a $45^\circ$ y $90^\circ$, cuidando la tasa de avance del disco abrasivo para evitar sobrecalentamiento en la zona afectada por el calor (ZAC).
 
-![Corte con Tronzadora](Imagenes/IMG_9380_video.jpg)
+
 *Figura 3: Operación de corte del tubo metálico con la cortadora sensitiva de disco.*
 
 ---
@@ -64,16 +70,16 @@ Se fijó el perfil tubular metálico en la prensa de la tronzadora. Se ejecutaro
 ### Paso 4: Esmerilado, Limado de Rebabas y Escuadre
 Tras el corte, los bordes tubulares presentaron filosas rebabas. Con limas metálicas y esmerilado ligero se limpiaron los biseles hasta lograr caras planas, verificando la alineación a $90^\circ$ sobre la mesa perforada mediante la escuadra Truper.
 
-|<img src="Imagenes/IMG_9376.jpg" width="400" alt="Piezas en Mesa de Trabajo"> | <img src="Imagenes/IMG_9373.jpg" width="400" alt="Detalle de Alineación"> |
-| :---: | :---: |
-| *Figura 4: Presentación de los tubos preparados en la mesa perforada.* | *Figura 5: Verificación del ángulo a 90° con escuadra combinada.* |
+![esmeril](../../Imagenes/esmeril.png) 
+
+| *Figura 4: Presentación de la maquinaria para esmerilar.* |
 
 ---
 
 ### Paso 5: Proceso de Soldadura por Arco y Manejo del Electrodo
 Se aplicó la técnica de encendido por raspe/punteo del electrodo sobre el metal. Se mantuvo una longitud de arco constante para depositar cordones en las uniones tubulares.
 
-![Detalle de la Soldadura](Imagenes/IMG_9373.jpg)
+![Detalle de la Soldadura](Imagenes/soldadura1.png)
 *Figura 6: Inspección visual de la unión soldada a 90° en el perfil metálico.*
 
 ---
