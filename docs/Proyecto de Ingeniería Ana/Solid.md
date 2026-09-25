@@ -26,8 +26,8 @@
 * **Guantes de Carnaza para Soldador:** Aislamiento térmico y eléctrico para la manipulación de piezas e hilo electrodo.
 * **Careta para Soldar (Sombra Variable):** Protección contra radiación ultravioleta/infrarroja e intensidad lumínica del arco eléctrico.
 * **Botas de Casquillo y Ropa de Algodón:** Seguridad operativa obligatoria en el área de máquinas.
-![material](../../Imagenes/careta.png)
-![materia](../../Imagenes/yomateria.png)
+![material](../Imagenesana/careta.png)
+![materia](../Imagenesana/yomateria.png)
 
 
 ### Equipos y Materiales de Taller
@@ -36,7 +36,7 @@
 * **Tronzadora de Disco Abrasivo:** Cortadora sensitiva para perfiles tubulares de metal.
 * **Herramientas de Desbaste y Medición:** Limas metálicas planas, escuadra combinada Truper, regla y mesa de trabajo perforada para ensamble.
 
-![Generador](../../Imagenes/generador.png)
+![Generador](../Imagenesana/generador.png)
 
 
 ---
@@ -46,7 +46,7 @@
 ### Paso 1: Configuración del Generador y Conexión Industrial
 Bajo la supervisión del profesor Cholula y el Mtro. Oliver Ochoa en el IDIT, se realizó el encendido secuencial del generador. Se inspeccionaron las conexiones eléctricas industriales trifásicas (tipo NEMA) y se ajustó el amperaje de salida a la energía exacta recomendada para el calibre del tubo y el electrodo seleccionado.
 
-![Conexión de Alimentación Industrial](Imagenes/IMG_9380.jpg)
+![Conexión de Alimentación Industrial](../Imagenesana/Conexionmiller.png)
 *Figura 1: Conexión trifásica industrial de seguridad y panel del generador regulado en el IDIT.*
 
 ---
@@ -54,7 +54,7 @@ Bajo la supervisión del profesor Cholula y el Mtro. Oliver Ochoa en el IDIT, se
 ### Paso 2: Preparación de Materiales de Medición y EPP
 Se dispuso el EPP completo (pechera, guantes, careta) y los instrumentos de medición sobre la mesa de trabajo perforada antes de iniciar cualquier operación de corte o soldadura.
 
-![Herramientas y EPP](../Imagenes/seguridad.png)
+![Herramientas y EPP](../Imagenesana/seguridad.png)
 *Figura 2: Equipo de medición, limas de desbaste, careta y EPP alistados en la zona de máquinas.*
 .
 ---
@@ -63,14 +63,13 @@ Se dispuso el EPP completo (pechera, guantes, careta) y los instrumentos de medi
 Se fijó el perfil tubular metálico en la prensa de la tronzadora. Se ejecutaron cortes a $45^\circ$ y $90^\circ$, cuidando la tasa de avance del disco abrasivo para evitar sobrecalentamiento en la zona afectada por el calor (ZAC).
 
 
-*Figura 3: Operación de corte del tubo metálico con la cortadora sensitiva de disco.*
 
 ---
 
 ### Paso 4: Esmerilado, Limado de Rebabas y Escuadre
 Tras el corte, los bordes tubulares presentaron filosas rebabas. Con limas metálicas y esmerilado ligero se limpiaron los biseles hasta lograr caras planas, verificando la alineación a $90^\circ$ sobre la mesa perforada mediante la escuadra Truper.
 
-![esmeril](../../Imagenes/esmeril.png) 
+![esmeril](../Imagenesana/esmeril.png) 
 
 | *Figura 4: Presentación de la maquinaria para esmerilar.* |
 
@@ -79,7 +78,7 @@ Tras el corte, los bordes tubulares presentaron filosas rebabas. Con limas metá
 ### Paso 5: Proceso de Soldadura por Arco y Manejo del Electrodo
 Se aplicó la técnica de encendido por raspe/punteo del electrodo sobre el metal. Se mantuvo una longitud de arco constante para depositar cordones en las uniones tubulares.
 
-![Detalle de la Soldadura](Imagenes/soldadura1.png)
+![Detalle de la Soldadura](../Imagenesana/soldadura1.png)
 *Figura 6: Inspección visual de la unión soldada a 90° en el perfil metálico.*
 
 ---

@@ -38,37 +38,32 @@ Las bisagras vivas consisten en cortar patrones de celosía intercalados en una 
 
 Bajo la supervisión del Mtro. Oliver Ochoa, se desarrollaron los modelos paramétricos en SolidWorks analizando las cotas y la tolerancia de encaje.
 
-### Figura 1: Disposición y Plano de Ensambles 2D
-Se trazó la plantilla de placas cuadradas alineadas, incorporando almenas y pestañas en los bordes para optimizar el espacio de corte y preparar la fabricación en lote.
+### Figura 1: Croquizado
+Se trazó un cuadrado, incorporando y pestañas en los bordes para posteriormente extruirlo y hacer su pieza con las pestanas contruentes
 
-![Vista de Plano y Disposición de Piezas](Imagenes/WhatsApp Image 2026-09-18 at 08.44.51.jpeg)
-*Figura 1: Proyección en plano 2D con la disposición organizada de los cuadrados dentados y pestañas de ensamble.*
+![figura1](../Imagenesana/pieza1.jpeg)
+*Figura 1: Primera pieza.*
 
 ---
 
-### Figura 2: Extrusión Paramétrica de la Pieza
+### Figura 2: Parametros de la pieza
+
+Se definieron las variables geométricas del croquis: base cuadrada de $50.00\text{ mm}$, profundidad de pestaña de $3.00\text{ mm}$ (igual al espesor del material) y ancho de almena de $6.00\text{ mm}$.
 Se realizó la operación de extrusión considerando el espesor nominal de la lámina de trabajo ($3.00\text{ mm}$), permitiendo validar el volumen tridimensional de la pieza individual.
 
-![Modelado 3D de Pieza Extruida](piezas.png)
+![Modelado 3D de Pieza Extruida](../Imagenesana/pieza2.jpeg)
 *Figura 2: Pieza extruida tridimensionalmente en SolidWorks lista para pruebas de ensamble.*
 
 ---
 
-### Figura 3: Acotado y Tolerancias en Croquis
-Se definieron las variables geométricas del croquis: base cuadrada de $50.00\text{ mm}$, profundidad de pestaña de $3.00\text{ mm}$ (igual al espesor del material) y ancho de almena de $6.00\text{ mm}$, aplicando el *offset* de Kerf.
+### Figura 3: Plano en solid
+Se trazó la plantilla de placas cuadradas alineadas, incorporando almenas y pestañas en los bordes para optimizar el espacio de corte y preparar la fabricación en lote.
 
-![Croquis Acotado en SolidWorks](Imagenes/WhatsApp Image 2026-09-18 at 08.45.08.jpeg)
-*Figura 3: Detalle de cotas paramétricas en el croquis 2D ($50.00\text{ mm}$ de lado y $6.00\text{ mm}$ por pestaña).*
-
----
-
-### Figura 4: Perspectiva 3D y Verificación de Uniones
-Se inspeccionó el sólido en perspectiva isométrica para verificar que el relieve de los dientes no presentara colisiones antes de la simulación del ensamble tridimensional.
-
-![Vista Isométrica Tridimensional](Imagenes/WhatsApp Image 2026-09-18 at 08.45.01.jpeg)
-*Figura 4: Vista en perspectiva 3D mostrando los relieves dentados de la cara de ensamble.*
+![plano](../Imagenesana/piezas.png)
+*Figura 3: Plano de las piezas acomodadas para dxf.*
 
 ---
+
 
 ## 4. Resumen de Parámetros y Resultados
 
@@ -76,7 +71,6 @@ Se inspeccionó el sólido en perspectiva isométrica para verificar que el reli
 | :--- | :--- | :--- |
 | **Geometry Base** | Croquis de $50.00 \times 50.00\text{ mm}$ | Establecer la dimensión estructural de la cara plana |
 | **Pestañas / Almenas** | Cortes/Extrusiones de $6.00\text{ mm}$ | Generar la unión mecánica macho-hembra |
-| **Ajuste por Kerf** | Offset exterior de $+0.09\text{ mm}$ | Evitar holguras y lograr ensamble a presión (*press-fit*) |
 | **Living Hinges** | Patrón de cortes intercalados | Permitir la curvatura de piezas rígidas para formas complejas |
 
 ---
@@ -85,8 +79,7 @@ Se inspeccionó el sólido en perspectiva isométrica para verificar que el reli
 
 * Se aprendió a modelar geométricamente componentes en SolidWorks considerando de origen las limitaciones y tolerancias del proceso de manufactura sustractiva por láser.
 * La adecuada selección del patrón de bisagra viva permite transformar láminas rígidas planas en volúmenes tridimensionales flexibles y orgánicos.
-* Las sesiones supervisadas por el Mtro. Oliver Ochoa permitieron comprender la relación fundamental entre la teoría del modelado CAD, las tolerancias físicas (Kerf) y el ensamblaje mecánico real.
-)";
+* Las sesiones supervisadas por el Mtro. Oliver Ochoa permitieron comprender la relación fundamental entre la teoría del modelado CAD, las tolerancias físicas (Kerf) y el ensamblaje mecánico real.)";
 
     reporte.close();
     
