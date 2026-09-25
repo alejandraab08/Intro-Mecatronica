@@ -36,14 +36,18 @@ A continuación se detalla la documentación técnica en video integrada en la e
 ### Video 1: Inicialización del Software SmartCut e Importación de Archivo
 * **Descripción:** En este segmento se muestra la apertura del programa *SmartCut* en la computadora del laboratorio. Se realiza la inserción de la memoria USB que contiene la licencia/llave de permisos para habilitar las funciones de comunicación con la máquina. Posteriormente, se efectúa la importación de un archivo vectorial en formato `.DXF`.
 
-[video1](../Imagenesana/Video1.zip)
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video1.mp4" type="video/mp4">
+</video>
 
 ---
 
 ### Video 2: Ajuste de Unidades, Escalado y Edición de Piezas
 * **Descripción:** Demostración de la verificación de unidades dentro del software, asegurando que el espacio de trabajo esté configurado en milímetros ($mm$). Se observa el procedimiento para verificar dimensiones reales de las piezas importadas, así como la duplicación y acomodo de elementos sobre el lienzo de trabajo para optimizar el área del material.
 
-[video2](../Imagenesana/video2.zip)
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video2.mp4" type="video/mp4">
+</video>
 
 
 ---
@@ -51,7 +55,9 @@ A continuación se detalla la documentación técnica en video integrada en la e
 ### Video 3: Inserción de Texto y Asignación de Capas de Grabado/Corte
 * **Descripción:** Explicación del proceso para agregar texto directamente en la plataforma, edición de tipografías y el procedimiento para clasificar geometrías mediante colores de capa. Esto permite diferenciar operacionalmente qué elementos se procesarán como grabado vectorial y cuáles como corte.
 
-[video3](../Imagenesana/video3.zip)
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video3.mp4" type="video/mp4">
+</video>
 
 
 ---
@@ -59,7 +65,9 @@ A continuación se detalla la documentación técnica en video integrada en la e
 ### Video 4: Configuración de Parámetros de Operación (Potencia y Velocidad)
 * **Descripción:** Ajuste técnico de la velocidad de desplazamiento ($\frac{mm}{s}$) y el porcentaje de potencia máxima del tubo láser para cada capa de color. Se enfatiza cómo la selección de estos valores determina la profundidad del grabado o la capacidad de atravesar el material de trabajo sin quemar las aristas.
 
-[video4](../Imagenesana/video4.zip)
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video4.mp4" type="video/mp4">
+</video>
 
 
 ---
@@ -68,7 +76,9 @@ A continuación se detalla la documentación técnica en video integrada en la e
 * **Descripción:** Demostración en la cortadora láser industrial CAMFive (Modelo CFL-CMA1390T). Muestra el encendido del sistema general, el uso de la llave física de seguridad, la calibración y movimiento de los cabezales desde el panel de control, y la indicación obligatoria de mantener la cubierta de protección cerrada durante el envío y ejecución del archivo.
 
 
-![video5](../Imagenesana/video5.zip)
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video5.mp4" type="video/mp4">
+</video>
 
 ---
 
