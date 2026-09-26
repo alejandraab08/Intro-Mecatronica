@@ -62,10 +62,10 @@ Regresamos al modelo en SolidWorks para hacer los ajustes necesarios:
 
 ---
 ## 6. Fotos y Evidencias
-![Foto1](../imagenes/ballena (1).png){loading=lazy}
-![Foto2](../imagenes/ballena (2).png){loading=lazy}
-![Foto3](../imagenes/ballena (3).png){loading=lazy}
-![Foto4](../imagenes/ballena (4).png){loading=lazy}
+![Foto1](../imagenes/ba (1).png){loading=lazy}
+![Foto2](../imagenes/ba (2).png){loading=lazy}
+![Foto3](../imagenes/bo (1).png){loading=lazy}
+![Foto4](../imagenes/bo (2).png){loading=lazy}
 
 ## Conclusión
 
