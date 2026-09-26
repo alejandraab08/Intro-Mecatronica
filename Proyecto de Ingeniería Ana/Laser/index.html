@@ -1,0 +1,1378 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Ensamblaje/">
+      
+      
+        <link rel="next" href="../../Reflexiones/VisionMecatronica/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Laser - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-laboratorio-puesta-en-marcha-y-operacion-de-cortadora-laser-industrial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Laser
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soldaduras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CuboSolidWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/SolidWorksDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelado Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CorteLaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte Láser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoBallena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Ana
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Ana
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte y soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ensamblaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-marco-teorico-el-kerf-y-su-relacion-con-los-materiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Marco Teórico: El Kerf y su Relación con los Materiales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Marco Teórico: El Kerf y su Relación con los Materiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#factores-que-afectan-el-kerf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factores que afectan el Kerf:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importancia-en-ingenieria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importancia en Ingeniería:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-registro-audiovisual-y-descripcion-de-procedimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Registro Audiovisual y Descripción de Procedimientos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Registro Audiovisual y Descripción de Procedimientos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-1-inicializacion-del-software-smartcut-e-importacion-de-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 1: Inicialización del Software SmartCut e Importación de Archivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-2-ajuste-de-unidades-escalado-y-edicion-de-piezas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 2: Ajuste de Unidades, Escalado y Edición de Piezas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-3-insercion-de-texto-y-asignacion-de-capas-de-grabadocorte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 3: Inserción de Texto y Asignación de Capas de Grabado/Corte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-4-configuracion-de-parametros-de-operacion-potencia-y-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 4: Configuración de Parámetros de Operación (Potencia y Velocidad)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-5-puesta-en-marcha-fisica-de-la-cortadora-laser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 5: Puesta en Marcha Física de la Cortadora Láser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-marco-teorico-el-kerf-y-su-relacion-con-los-materiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Marco Teórico: El Kerf y su Relación con los Materiales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Marco Teórico: El Kerf y su Relación con los Materiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#factores-que-afectan-el-kerf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factores que afectan el Kerf:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importancia-en-ingenieria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importancia en Ingeniería:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-registro-audiovisual-y-descripcion-de-procedimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Registro Audiovisual y Descripción de Procedimientos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Registro Audiovisual y Descripción de Procedimientos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-1-inicializacion-del-software-smartcut-e-importacion-de-archivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 1: Inicialización del Software SmartCut e Importación de Archivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-2-ajuste-de-unidades-escalado-y-edicion-de-piezas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 2: Ajuste de Unidades, Escalado y Edición de Piezas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-3-insercion-de-texto-y-asignacion-de-capas-de-grabadocorte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 3: Inserción de Texto y Asignación de Capas de Grabado/Corte
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-4-configuracion-de-parametros-de-operacion-potencia-y-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 4: Configuración de Parámetros de Operación (Potencia y Velocidad)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-5-puesta-en-marcha-fisica-de-la-cortadora-laser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video 5: Puesta en Marcha Física de la Cortadora Láser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-laboratorio-puesta-en-marcha-y-operacion-de-cortadora-laser-industrial">Reporte de Laboratorio: Puesta en Marcha y Operación de Cortadora Láser Industrial</h1>
+<p><strong>Institución:</strong> Universidad Iberoamericana Puebla<br />
+<strong>Departamento:</strong> Ingenierías / Mecatrónica<br />
+<strong>Asignatura:</strong> Proyectos de Ingeniería<br />
+<strong>Ubicación:</strong> Instituto de Diseño e Innovación Tecnológica (IDIT)</p>
+<hr />
+<h2 id="1-objetivos">1. Objetivos</h2>
+<ul>
+<li>Comprender el protocolo de encendido y operación segura de una cortadora láser de grado industrial (CAMFive CFL-CMA1390T).</li>
+<li>Dominar la interfaz del software <em>SmartCut</em>, desde el uso de la llave física de licencia hasta la importación y edición de vectores (<code>.DXF</code>) y texto.</li>
+<li>Configurar parámetros de potencia y velocidad según el tipo de capa (corte o grabado).</li>
+<li>Analizar el concepto de <em>kerf</em> (sangría de corte), su variación en función del material y su impacto en la precisión dimensional del proyecto.</li>
+</ul>
+<hr />
+<h2 id="2-marco-teorico-el-kerf-y-su-relacion-con-los-materiales">2. Marco Teórico: El Kerf y su Relación con los Materiales</h2>
+<p>El <strong>kerf</strong> (o sangría) es el ancho del material que el haz láser evapora o remueve al momento de realizar un corte. Aunque el láser se percibe como un punto sin grosor, en la práctica el haz focalizado tiene un diámetro finito.</p>
+<h3 id="factores-que-afectan-el-kerf">Factores que afectan el Kerf:</h3>
+<ol>
+<li><strong>Tipo de Material:</strong> Materiales con mayor conductividad térmica o menor punto de sublimación (como ciertos polímeros o acrílicos) tienden a presentar un kerf ligeramente mayor que materiales densos como el MDF o la madera.</li>
+<li><strong>Espesor del Material:</strong> A mayor grosor, se requiere mayor energía o menor velocidad, lo que incrementa la zona afectada por el calor.</li>
+<li><strong>Potencia y Velocidad:</strong> Una mayor potencia o velocidad reducida aumentan la cantidad de energía depositada por unidad de longitud, ensanchando la sangría.</li>
+<li><strong>Lente y Distancia Focal:</strong> La distancia focal del lente determina el tamaño del punto de enfoque (<em>spot size</em>); un punto más pequeño produce un kerf más angosto.</li>
+</ol>
+<h3 id="importancia-en-ingenieria">Importancia en Ingeniería:</h3>
+<p>En proyectos de ingeniería donde se requieren ensambles a presión (<em>press-fit</em>), engranajes o tolerancias estrechas, <strong>no compensar el kerf resulta en piezas holgadas o fuera de especificación</strong>. Si el láser corta exactamente sobre la línea teórica del vector, el resultado final será más pequeño que el diseño original por un valor igual a la mitad del kerf en cada borde (<span class="arithmatex">\(\frac{kerf}{2}\)</span>). Por ello, en el software o en el diseño se debe aplicar un desfase (<em>offset</em>) exterior para mantener las dimensiones reales deseadas.</p>
+<hr />
+<h2 id="3-registro-audiovisual-y-descripcion-de-procedimientos">3. Registro Audiovisual y Descripción de Procedimientos</h2>
+<p>A continuación se detalla la documentación técnica en video integrada en la estructura del repositorio local.</p>
+<h3 id="video-1-inicializacion-del-software-smartcut-e-importacion-de-archivo">Video 1: Inicialización del Software SmartCut e Importación de Archivo</h3>
+<ul>
+<li><strong>Descripción:</strong> En este segmento se muestra la apertura del programa <em>SmartCut</em> en la computadora del laboratorio. Se realiza la inserción de la memoria USB que contiene la licencia/llave de permisos para habilitar las funciones de comunicación con la máquina. Posteriormente, se efectúa la importación de un archivo vectorial en formato <code>.DXF</code>.</li>
+</ul>
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video1.mp4" type="video/mp4">
+</video>
+
+<hr />
+<h3 id="video-2-ajuste-de-unidades-escalado-y-edicion-de-piezas">Video 2: Ajuste de Unidades, Escalado y Edición de Piezas</h3>
+<ul>
+<li><strong>Descripción:</strong> Demostración de la verificación de unidades dentro del software, asegurando que el espacio de trabajo esté configurado en milímetros (<span class="arithmatex">\(mm\)</span>). Se observa el procedimiento para verificar dimensiones reales de las piezas importadas, así como la duplicación y acomodo de elementos sobre el lienzo de trabajo para optimizar el área del material.</li>
+</ul>
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video2.mp4" type="video/mp4">
+</video>
+
+<hr />
+<h3 id="video-3-insercion-de-texto-y-asignacion-de-capas-de-grabadocorte">Video 3: Inserción de Texto y Asignación de Capas de Grabado/Corte</h3>
+<ul>
+<li><strong>Descripción:</strong> Explicación del proceso para agregar texto directamente en la plataforma, edición de tipografías y el procedimiento para clasificar geometrías mediante colores de capa. Esto permite diferenciar operacionalmente qué elementos se procesarán como grabado vectorial y cuáles como corte.</li>
+</ul>
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video3.mp4" type="video/mp4">
+</video>
+
+<hr />
+<h3 id="video-4-configuracion-de-parametros-de-operacion-potencia-y-velocidad">Video 4: Configuración de Parámetros de Operación (Potencia y Velocidad)</h3>
+<ul>
+<li><strong>Descripción:</strong> Ajuste técnico de la velocidad de desplazamiento (<span class="arithmatex">\(\frac{mm}{s}\)</span>) y el porcentaje de potencia máxima del tubo láser para cada capa de color. Se enfatiza cómo la selección de estos valores determina la profundidad del grabado o la capacidad de atravesar el material de trabajo sin quemar las aristas.</li>
+</ul>
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video4.mp4" type="video/mp4">
+</video>
+
+<hr />
+<h3 id="video-5-puesta-en-marcha-fisica-de-la-cortadora-laser">Video 5: Puesta en Marcha Física de la Cortadora Láser</h3>
+<ul>
+<li><strong>Descripción:</strong> Demostración en la cortadora láser industrial CAMFive (Modelo CFL-CMA1390T). Muestra el encendido del sistema general, el uso de la llave física de seguridad, la calibración y movimiento de los cabezales desde el panel de control, y la indicación obligatoria de mantener la cubierta de protección cerrada durante el envío y ejecución del archivo.</li>
+</ul>
+<video controls width="100%">
+  <source src="../../Imagenesana/videos/video5.mp4" type="video/mp4">
+</video>
+
+<hr />
+<h2 id="4-conclusiones">4. Conclusiones</h2>
+<ul>
+<li>La correcta secuenciación desde la preparación del vector en <em>SmartCut</em> hasta el encendido físico de la máquina asegura un proceso eficiente y previene accidentes de laboratorio.</li>
+<li>El análisis del <em>kerf</em> es indispensable en la manufactura con láser: el tipo de material impone límites físicos que deben compensarse en el software de diseño para garantizar la precisión dimensional de los componentes.
+| <strong>3. Importación</strong> | Carga de vectores CAD | Formato <code>.DXF</code> configurado en milímetros (<code>mm</code>) |
+| <strong>4. Ajuste Kerf</strong> | Compensación en trazado | Offset de <span class="arithmatex">\(+0.08\text{ mm}\)</span> a <span class="arithmatex">\(+0.10\text{ mm}\)</span> según material |
+| <strong>5. Ejecución</strong> | Configuración por capas | Control de Potencia (Max/Min %) y Velocidad (<span class="arithmatex">\(\text{mm/s}\)</span>) |</li>
+</ul>
+<hr />
+<h2 id="6-conclusiones">6. Conclusiones</h2>
+<ul>
+<li>La operación de la cortadora láser CAMFive requiere el estricto cumplimiento de protocolos físicos (enclavamiento de tapa) y digitales (llave Dongle USB).</li>
+<li>El <strong>Kerf</strong> no es un defecto, sino una variable física predecible. Su correcta compensación en el software CAD es indispensable para garantizar el ensamble perfecto de piezas.</li>
+<li>
+<p>La adecuada asignación de velocidad y potencia en SmartCanvas previene la sobrecombustión en materiales densos como MDF o la deformación térmica en polímeros.
+)";</p>
+<p>reporte.close();</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
