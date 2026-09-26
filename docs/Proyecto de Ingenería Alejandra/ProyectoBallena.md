@@ -65,7 +65,7 @@ Regresamos al modelo en SolidWorks para hacer los ajustes necesarios:
 ![Foto1](../imagenes/ballena (1).png){loading=lazy}
 ![Foto2](../imagenes/ballena (2).png){loading=lazy}
 ![Foto3](../imagenes/ballena (3).png){loading=lazy}
-![Foto4](../imagenes/ballena 4).png){loading=lazy}
+![Foto4](../imagenes/ballena (4).png){loading=lazy}
 
 ## Conclusión
 
