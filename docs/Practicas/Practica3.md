@@ -91,7 +91,15 @@ Implementar el control de actuadores mecatrónicos mediante un microcontrolador 
 | **El motor gira en un solo sentido sin responder a las señales.** | Pin de activación/standby (`STBY`) del driver TB6612 flotante o desconectado. | Se conectó el pin `STBY` permanentemente a 3.3V para habilitar los canales lógicos del circuito integrado. |
 
 ---
+## Fotos
+![Foto1](../imagenes/lele (1).png){loading=lazy}
+![Foto1](../imagenes/lele (2).png){loading=lazy}
+![Foto1](../imagenes/lele (3).png){loading=lazy}
+![Foto1](../imagenes/lele (4).png){loading=lazy}
+![Foto1](../imagenes/lele (5).png){loading=lazy}
+![Foto1](../imagenes/lele (6).png){loading=lazy}
 
+---
 ## 📝 Conclusiones
 
 * La utilización de un puente H como el **TB6612** resulta indispensable para desacoplar de forma segura la etapa de control digital del ESP32 de los picos de corriente y el ruido inductivo generados por los motores de corriente directa.
