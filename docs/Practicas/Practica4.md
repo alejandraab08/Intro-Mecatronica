@@ -39,21 +39,21 @@ Permite identificar eventos repentinos (como una sombra rápida o un impacto sob
 
 ### Mini Práctica 1: Potenciómetro (Lectura, Porcentaje y Ángulo)
 **Descripción:** Se realiza la lectura del divisor de voltaje mediante la entrada analógica del ESP32. El valor crudo del ADC (0-4095) se transforma mediante fórmulas de proporción en dos valores útiles: porcentaje de apertura (0 a 100%) y ángulo equivalente de rotación (0 a 180°).
-![Foto1](../imagenes/poo (2).png){loading=lazy}
+![Foto1](../imagenes/poo (2).jpeg){loading=lazy}
 
 ---
 
 ### Mini Práctica 2: Sensor Ultrasónico (Calibración y Error)
 **Descripción:** Se toman lecturas de distancia contra una regla graduada en 5 puntos de prueba. Se calcula el error en cada punto y se genera una recta de calibración simple para corregir las mediciones en tiempo real.
 
-![Foto1](../imagenes/poo (1).png){loading=lazy}
+![Foto1](../imagenes/poo (1).jpeg){loading=lazy}
 
 ---
 
 ### Mini Práctica 4: Sensor fotosensible (LDR)
 **Descripción:** Se utiliza la fotoresistencia (LDR) para monitorear la luz ambiental. Al pasar la mano rápidamente o interrumpir el haz de luz, la caída drástica en el valor analógico supera el umbral configurado por software, activando una alerta visual/serie en el sistema.
 
-![Foto1](../imagenes/poo (3).png){loading=lazy}
+![Foto1](../imagenes/poo (3).jpeg){loading=lazy}
 ---
 
 ## 4. 🛠️ Bitácora de Errores
@@ -67,4 +67,6 @@ Permite identificar eventos repentinos (como una sombra rápida o un impacto sob
 ---
 
 ## 6. 📝 Conclusión
-En esta práctica se comprendió de manera clara el flujo de procesamiento de señales analógicas desde su captación física hasta su acondicionamiento digital. Se aprendió a escalar lecturas de ADC a unidades de uso práctico (porcentaje y grados), a calibrar sensores mediante referencias patrón para reducir errores de medición, y a seleccionar el tamaño adecuado de ventana en un filtro de promedio móvil para eliminar ruido eléctrico sin sacrificar el tiempo de respuesta del microcontrolador.
+En esta práctica se comprendió de manera clara el flujo de procesamiento de señales analógicas desde su captación física hasta su acondicionamiento digital. Se aprendió a escalar lecturas de ADC a unidades de uso práctico (porcentaje y grados) y a calibrar sensores mediante referencias para reducir errores de medición.
+
+*Se utilizo ia para darle formato a la practica
