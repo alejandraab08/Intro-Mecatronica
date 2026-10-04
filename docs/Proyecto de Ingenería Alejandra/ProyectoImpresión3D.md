@@ -47,9 +47,9 @@ Como proyecto principal de la práctica, se diseñó y fabricó una **oruga arti
 ---
 
 ## 5. Fotos
-![Foto1](../imagenes/o (1).jpeg){loading=lazy}
-![Foto1](../imagenes/o (2).jpeg){loading=lazy}
-![Foto1](../imagenes/o (3).jpeg){loading=lazy}
+![Foto1](../imagenes/o (1).png){loading=lazy}
+![Foto1](../imagenes/o (2).png){loading=lazy}
+![Foto1](../imagenes/o (3).png){loading=lazy}
 ![Foto1](../imagenes/oo (1).jpeg){loading=lazy}
 ![Foto1](../imagenes/oo (2).jpeg){loading=lazy}
 ---
