@@ -1,0 +1,1503 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica5/">
+      
+      
+        <link rel="next" href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Practica 6 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ficha-de-estacion-mecanismos-introduccion-a-la-mecatronica" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registro-y-descripcion-de-videos-de-los-mecanismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registro y Descripción de Videos de los Mecanismos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registro y Descripción de Videos de los Mecanismos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mecanismo-cicloidal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mecanismo Cicloidal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cremallera-y-pinon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cremallera y Piñón
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-engranaje-planetario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Engranaje Planetario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cruz-de-ginebra-mecanismo-de-ginebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cruz de Ginebra / Mecanismo de Ginebra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tornillo-sin-fin-y-corona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tornillo Sin Fín y Corona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-engranaje-conico-corona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Engranaje Cónico / Corona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-obturador-de-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Obturador de Iris
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-junta-cardan-union-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Junta Cardán / Unión Universal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-engranaje-intermitente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Engranaje Intermitente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-aplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas aplicados
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soldaduras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CuboSolidWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/SolidWorksDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelado Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CorteLaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte Láser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoBallena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ClaseMaquinas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase Maquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoImpresi%C3%B3n3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Impresion 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Ana
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Ana
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte y soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Ensamblaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Laser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#registro-y-descripcion-de-videos-de-los-mecanismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registro y Descripción de Videos de los Mecanismos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Registro y Descripción de Videos de los Mecanismos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mecanismo-cicloidal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mecanismo Cicloidal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cremallera-y-pinon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cremallera y Piñón
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-engranaje-planetario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Engranaje Planetario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cruz-de-ginebra-mecanismo-de-ginebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cruz de Ginebra / Mecanismo de Ginebra
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-tornillo-sin-fin-y-corona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Tornillo Sin Fín y Corona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-engranaje-conico-corona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Engranaje Cónico / Corona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-obturador-de-iris" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Obturador de Iris
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-junta-cardan-union-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Junta Cardán / Unión Universal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-engranaje-intermitente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Engranaje Intermitente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemas-aplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problemas aplicados
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ficha-de-estacion-mecanismos-introduccion-a-la-mecatronica">Ficha de Estación - Mecanismos (Introducción a la Mecatrónica)</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Estación</th>
+<th style="text-align: left;">¿Qué transforma? (vel/par, rot/trasl, cont/inter, cambio de eje)</th>
+<th style="text-align: left;">Relación estimada (cuenta dientes o vueltas)</th>
+<th style="text-align: left;">¿Reversible o autobloqueante?</th>
+<th style="text-align: left;">¿Dónde lo has visto en la vida real?</th>
+<th style="text-align: left;">¿Dónde serviría en el carro o en un proyecto tuyo?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>A · Diferencial (Crown gear)</strong></td>
+<td style="text-align: left;">Cambio de eje a 90° / Transforma par y velocidad angular entre ejes perpendiculares.</td>
+<td style="text-align: left;"><strong>1:3</strong> (aprox. 12 dientes en el piñón de entrada vs. 36 dientes en la corona).</td>
+<td style="text-align: left;">Reversible</td>
+<td style="text-align: left;">En el eje de transmisión trasero de camionetas y automóviles de tracción trasera.</td>
+<td style="text-align: left;">En el diferencial motriz para transmitir la fuerza del motor a las ruedas traseras permitiendo diferentes velocidades en curvas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>B · Cicloidal (Cycloidal drive)</strong></td>
+<td style="text-align: left;">Vel/Par (Reduce alta velocidad a baja velocidad incrementando sustancialmente el par).</td>
+<td style="text-align: left;"><strong>1:10</strong> a <strong>1:11</strong> (basado en el número de pines concéntricos exteriores).</td>
+<td style="text-align: left;">Autobloqueante (por la geometría excéntrica y la alta fricción del contacto).</td>
+<td style="text-align: left;">En articulaciones de brazos robóticos industriales de alta precisión y reductores armónicos.</td>
+<td style="text-align: left;">En la articulación o codo de un brazo robótico articulado para sostener cargas pesadas sin perder posición.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>C · Cardán (Universal joint)</strong></td>
+<td style="text-align: left;">Cambio de eje angular (transmite rotación continua entre ejes desalineados angularmente).</td>
+<td style="text-align: left;"><strong>1:1</strong> (la velocidad angular promedio de entrada es igual a la de salida).</td>
+<td style="text-align: left;">Reversible</td>
+<td style="text-align: left;">En el árbol de transmisión de camionetas 4x4 y en llaves de vaso (dados articulados).</td>
+<td style="text-align: left;">Para acoplar la columna de dirección con la caja de dirección cuando no están alineadas en línea recta.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>D · Obturador (Shutter)</strong></td>
+<td style="text-align: left;">Rot/Trasl (Convierte rotación de la palanca exterior en desplazamiento radial de las hojas).</td>
+<td style="text-align: left;"><strong>N/A</strong> (Mecanismo de diafragma de apertura/cierre de área).</td>
+<td style="text-align: left;">Reversible</td>
+<td style="text-align: left;">En el objetivo/lente de cámaras fotográficas profesionales y proyectores de luz.</td>
+<td style="text-align: left;">En una válvula de admisión de aire variable o en un diafragma regulador de flujo para un proyecto de fluidos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E1 · Opción 1: Cremallera y Piñón (Rack &amp; Pinion)</strong></td>
+<td style="text-align: left;">Rot/Trasl (Convierte movimiento de rotación del piñón en movimiento lineal rectilíneo).</td>
+<td style="text-align: left;"><strong>1:1</strong> (Desplazamiento lineal proporcional al paso del piñón por vuelta).</td>
+<td style="text-align: left;">Reversible</td>
+<td style="text-align: left;">En el sistema de dirección de la mayoría de los autos ligeros y portones eléctricos.</td>
+<td style="text-align: left;">En el sistema de dirección del auto de carreras/baja para convertir el giro del volante en desplazamiento de las llantas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E1 · Opción 2: Cruz de Ginebra (Geneva Drive)</strong></td>
+<td style="text-align: left;">Cont/Inter (Convierte rotación continua en rotación intermitente/por pasos).</td>
+<td style="text-align: left;"><strong>1:6</strong> (La rueda conducida avanza 1/6 de vuelta (60°) por cada vuelta completa del impulsor).</td>
+<td style="text-align: left;">Autobloqueante (durante la fase de reposo gracias al contorno de bloqueo).</td>
+<td style="text-align: left;">En los mecanismos de avance de película en proyectores de cine antiguos y plataformas giratorias industriales.</td>
+<td style="text-align: left;">En un dispensador o carrusel de herramientas automatizado que requiera posicionarse en estaciones fijas.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E2 · Opción 1: Sin Fín y Corona (Worm Wheel)</strong></td>
+<td style="text-align: left;">Vel/Par + Cambio de eje a 90° (Reduce drásticamente velocidad e incrementa torque).</td>
+<td style="text-align: left;"><strong>1:20</strong> (1 entrada helicoidal por 20 dientes en la rueda conducida).</td>
+<td style="text-align: left;">Autobloqueante (el piñón sin fín puede mover la rueda, pero la rueda no puede mover al sin fín).</td>
+<td style="text-align: left;">En el mecanismo de elevación de grúas, elevadores y clavijas de afinación de guitarras.</td>
+<td style="text-align: left;">En el sistema del elevador de vidrios eléctrico del auto para evitar que la ventana se caiga por peso propio.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E2 · Opción 2: Engranaje Intermitente (Intermittent Gear)</strong></td>
+<td style="text-align: left;">Cont/Inter (Convierte rotación continua en rotación pausada o intermitente).</td>
+<td style="text-align: left;"><strong>1:4</strong> (Avance de un cuarto de vuelta intermitente por cada revolución completa).</td>
+<td style="text-align: left;">Reversible (mientras los dientes estén engranados).</td>
+<td style="text-align: left;">En contadores mecánicos, relojes analógicos y bandas de ensamblaje automatizadas.</td>
+<td style="text-align: left;">En un sistema de dosificación paso a paso para alimentar piezas en una línea de producción mecatrónica.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="registro-y-descripcion-de-videos-de-los-mecanismos">Registro y Descripción de Videos de los Mecanismos</h2>
+<h3 id="1-mecanismo-cicloidal">1. Mecanismo Cicloidal</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/cicloidal.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Se observa una vista superior de un reductor cicloidal impreso en 3D. Un disco azul con perfil lobular oscila excéntricamente impulsado por un eje central, haciendo contacto continuo con un rodamiento de pines dentro de un marco negro.</p>
+<h3 id="2-cremallera-y-pinon">2. Cremallera y Piñón</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/transformador.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Un piñón azul gira manualmente sobre una base fija y sus dientes enganchan una barra rectilínea dentada (cremallera), desplazándola de manera lineal de izquierda a derecha.</p>
+<h3 id="3-engranaje-planetario">3. Engranaje Planetario</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/reductor.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Tres engranajes planetarios azules situados a 120° orbitan alrededor de un eje central e interactúan simultáneamente con los dientes internos de un anillo de soporte exterior.</p>
+<h3 id="4-cruz-de-ginebra-mecanismo-de-ginebra">4. Cruz de Ginebra / Mecanismo de Ginebra</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/cruztransformadora.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Un manubrio circular azul con una clavija engrana en las ranuras de un disco en forma de estrella de 6 puntas, generando un movimiento de rotación pausado con paradas entre cada avance.</p>
+<h3 id="5-tornillo-sin-fin-y-corona">5. Tornillo Sin Fín y Corona</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/reductorchurro.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Un tornillo helicoidal (sin fín) azul dispuesto horizontalmente engrana con una rueda dentada plana posicionada a 90°. Al girar manualmente el tornillo, la rueda avanza muy lentamente.</p>
+<h3 id="6-engranaje-conico-corona">6. Engranaje Cónico / Corona</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/reductor3ruedas.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Se aprecia un plato/corona central grande accionado en sus extremos opuestos por dos piñones cónicos acoplados a 90°, demostrando la transmisión de fuerza entre ejes perpendiculares.</p>
+<h3 id="7-obturador-de-iris">7. Obturador de Iris</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/obturador.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Una serie de 6 aletas o paletas superpuestas se mueven concéntricamente mediante una pequeña palanca exterior para abrir y cerrar el diámetro central.</p>
+<h3 id="8-junta-cardan-union-universal">8. Junta Cardán / Unión Universal</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/unionuniversal.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Dos ejes azules conectados en el centro mediante un conector articulado en forma de cruz (cruceta) que permite rotar ambos ejes incluso cuando se dobla el ángulo entre ellos.</p>
+<h3 id="9-engranaje-intermitente">9. Engranaje Intermitente</h3>
+<p><img alt="video" loading="lazy" src="../../Imagenesana/transformarueda.mp4" />
+* <strong>Descripción de lo que se ve:</strong> Un disco impulsor grande provisto con sólo un sector parcial dentado hace girar a un piñón más pequeño únicamente durante una fracción de su vuelta, manteniéndolo estático el resto del tiempo.</p>
+<h2 id="problemas-aplicados">Problemas aplicados</h2>
+<p><img alt="Foto1" loading="lazy" src="../../imagenes/carrito%20%281%29.jpeg" />
+<img alt="Foto1" loading="lazy" src="../../imagenes/carrito%20%282%29.jpeg" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
