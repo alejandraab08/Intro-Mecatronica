@@ -50,3 +50,7 @@
 ### 9. Engranaje Intermitente 
 ![video](../Imagenesana/transformarueda.mp4){loading=lazy}
 * **Descripción de lo que se ve:** Un disco impulsor grande provisto con sólo un sector parcial dentado hace girar a un piñón más pequeño únicamente durante una fracción de su vuelta, manteniéndolo estático el resto del tiempo.
+
+## Problemas aplicados
+![Foto1](../imagenes/carrito (1).jpeg){loading=lazy}
+![Foto1](../imagenes/carrito (2).jpeg){loading=lazy}
