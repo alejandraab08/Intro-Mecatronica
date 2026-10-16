@@ -56,6 +56,8 @@ nav:
       - "Practica 5": Practicas/Practica5.md
       - "Practica 6": Practicas/Practica6.md
 
+
+
   - "Proyecto de Ingeniería Alejandra":
       - "Soldaduras": Proyecto de Ingenería Alejandra/Soldaduras.md
       - "Ensamblaje Solid Works": Proyecto de Ingenería Alejandra/CuboSolidWorks.md
@@ -64,8 +66,10 @@ nav:
       - "Proyecto Ballena": Proyecto de Ingenería Alejandra/ProyectoBallena.md
       - "Clase Maquinas": Proyecto de Ingenería Alejandra/ClaseMaquinas.md
       - "Proyecto Impresion 3D": Proyecto de Ingenería Alejandra/ProyectoImpresión3D.md
-
-
+  
+  - "Proyecto Carrito":
+      - "Prototipo": Proyecto carrito/Propuesta.md
+      
 
   - "Proyecto de Ingeniería Ana":
       - "Corte y soldadura": Proyecto de Ingeniería Ana/Solid.md
