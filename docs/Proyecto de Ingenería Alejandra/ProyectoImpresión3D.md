@@ -57,7 +57,8 @@ Como proyecto principal de la práctica, se diseñó y fabricó una **oruga arti
 
 ## 6. Conclusión
 
-imagenes/ORUGA.zip
+
+![Oruga.zip](../imagenes/ORUGA.zip)
 
 
 El uso de uniones en el diseño 3D expande por completo las posibilidades de la fabricación aditiva. Entender cómo se comportan geometrías como las **uniones en T revolucionadas** permite crear mecanismos complejos como la oruga articulada, logrando piezas funcionales, resistentes y con movimiento real en un solo proceso de impresión *Print-in-Place*, optimizando tiempos de trabajo y eliminando por completo la etapa de armado manual.
