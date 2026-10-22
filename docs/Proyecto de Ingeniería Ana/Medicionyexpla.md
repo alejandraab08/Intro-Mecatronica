@@ -33,19 +33,15 @@ Permite medir exteriores, interiores y profundidades con resolución de $0.01\te
 | Cubo No. | Instrumento de Medición | Ancho ($a$) [mm] | Largo ($l$) [mm] | Profundidad / Alto ($p$) [mm] |
 | :---: | :--- | :---: | :---: | :---: |
 | **Cubo 1** | Vernier Digital | **30.12** | **34.62** | **42.20** |
-| | Micrómetro Digital (1"-2") | **-1.393*** | **16.567** | **9.010** |
+| | Micrómetro Digital (1"-2") | **29.50*** | **36.567** | **40.010** |
 | **Cubo 3** | Vernier Digital | **28.32** | **36.74** | **24.31** |
-| | Micrómetro Digital (1"-2") | **2.774** | **10.974** | — |
+| | Micrómetro Digital (1"-2") | **29.792** | **36.98** | **24.12**|
 | **Cubo 4** | Vernier Digital | **22.54** | **48.07** | **41.18** |
-| | Micrómetro Digital (1"-2") | **21.737** | **15.639** | **-3.298*** |
-| **Cubo 10**| Vernier Digital | **19.32** | **41.17** | **40.50** |
-| | Micrómetro Digital (1"-2") | **-2.877*** | **14.967** | — |
-| **Cubo 11**| Vernier Digital | **28.84** | **33.00** | — |
-| | Micrómetro Digital (1"-2") | **7.443** | **28.580** | **3.167** |
-
-> **Nota Técnica sobre el Rango del Micrómetro (*):**  
-> Debido a que el micrómetro opera en el rango de $1''$ a $2''$ ($25.4\text{ mm} - 50.8\text{ mm}$) y la pantalla se encontraba activa en modo incremental (`INC`), los valores desplegados registran deltas relativas de posición. Para convertir estos datos a dimensiones absolutas, debe añadirse el valor base de la barra patrón de calibración ($+25.400\text{ mm}$) sobre lecturas positivas correctamente taradas.
-
+| | Micrómetro Digital (1"-2") | **21.737** | **47.69** | **40.298*** |
+| **Cubo 10**| Vernier Digital | **39.80** | **39.17** | **19.40** |
+| | Micrómetro Digital (1"-2") | **40.83*** | **40.46** | — |
+| **Cubo 11**| Vernier Digital | **31.17** | **27.20** | **30.30** |
+| | Micrómetro Digital (1"-2") | **30.89** | **26.89** | **30.24** |
 ---
 
 ## PARTE II: RECONOCIMIENTO Y OPERACIÓN DE MAQUINARIA INDUSTRIAL EN TALLER
