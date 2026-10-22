@@ -69,7 +69,14 @@ Una vez configurada la fresadora (fijación del material a la mesa de trabajo y 
 | **5. Acabado** | Remoción de pestañas de sujeción y acabado final | Herramientas manuales  |
 
 ---
+## FOTOS
+![Foto1](../imagenes/z (1).jpeg){loading=lazy}
+![Foto1](../imagenes/z (2).jpeg){loading=lazy}
+![Foto1](../imagenes/z (3).jpeg){loading=lazy}
+![Foto1](../imagenes/z (4).jpeg){loading=lazy}
 
+
+---
 ## 🎯 Conclusión
 
 El uso de **VCarve Pro** fue fundamental para traducir la idea vectorial de la mariposa en instrucciones de movimiento tridimensionales para la fresadora CNC. Comprender la diferencia entre trayectorias de perfilado, cajeras y la importancia de los *tabs* garantizó un proceso seguro, sin colisiones y con un acabado estético de gran calidad.
