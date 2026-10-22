@@ -62,13 +62,14 @@ Tras la evaluación del primer prototipo, se realizaron las correcciones necesar
 
 ## 6. Evidencias Audiovisuales y Fotográficas
 
-|<img src="../imagenes/ba (1).jpeg" width="400" alt="Ensamble Ballena 1"> | <img src="../imagenes/ba (2).jpeg" width="400" alt="Ensamble Ballena 2"> |
-| :---: | :---: |
-| *Figura 1: Vista general del modelo 3D ensamblado a presión.* | *Figura 2: Detalle de la estructura de costillas y columna vertebral en MDF.* |
+![ballenauno](../imagenes/ba%20(1).jpeg)
+![ballenados](../imagenes/ba%20(2).jpeg)
 
-|<img src="../imagenes/bo (1).png" width="400" alt="Plano CAD 1"> | <img src="../imagenes/bo (2).png" width="400" alt="Plano CAD 2"> |
-| :---: | :---: |
-| *Figura 3: Croquizado vector en SolidWorks con ranuras de compensación.* | *Figura 4: Verificación de tolerancias y geometría de piezas en software.* |
+| *Figura 1: Vista general del modelo 3D ensamblado a presión.* | *Figura 2: Detalle de la estructura de costillas y columna vertebral en MDF.* |
+![bouno](../imagenes/bo%20(1).png)
+![bodos](../imagenes/bo%20(2).png)
+
+*Figura 3: Croquizado vector en SolidWorks con ranuras de compensación.* | *Figura 4: Verificación de tolerancias y geometría de piezas en software.* |
 
 ---
 
