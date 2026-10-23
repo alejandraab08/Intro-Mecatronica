@@ -98,4 +98,3 @@ Muestra la pieza retirada de la base de impresión. Gracias al control del *infi
 * El dominio de la geometría de referencia (planos desfasados y angulados) en SolidWorks es esencial para construir modelos con movimientos complejos tridimensionales.
 * La calibración de parámetros en PrusaSlicer (especialmente la reducción del relleno al 5%) demostró que es posible obtener piezas funcionales y ligeras sin comprometer la integridad estructural ni la estética de la pieza final.
 ![pulpoimpre](../Imagenesana/Pulpoimpresion.zip)
-//holasubirepooooonoswsporknosesube
