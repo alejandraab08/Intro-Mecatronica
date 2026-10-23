@@ -1,0 +1,1867 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Laser/">
+      
+      
+        <link rel="next" href="../Proyectoballena/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Proyecto pulpo - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-diseno-de-mecanismos-articulados-print-in-place-y-manufactura-aditiva-en-prusa-mk4s" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proyecto pulpo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soldaduras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CuboSolidWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/SolidWorksDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelado Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CorteLaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte Láser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoBallena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ClaseMaquinas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase Maquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoImpresi%C3%B3n3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Impresion 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/MaquinaCNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Máquina CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Carrito
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto Carrito
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Chasis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chasis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Codigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codigo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Circuito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Circuito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Resultado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion carrito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Ana
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Ana
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte y soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ensamblaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Laser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto pulpo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto pulpo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-marco-teorico-y-principios-de-diseno-print-in-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Marco Teórico y Principios de Diseño Print-in-Place
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Marco Teórico y Principios de Diseño Print-in-Place">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-metodologia-print-in-place-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Metodología Print-in-Place (PiP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-densidad-de-relleno-infill-density-y-optimizacion-estrategica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Densidad de Relleno (Infill Density) y Optimización Estratégica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desarrollo-experimental-y-descripcion-de-evidencias-cad-manufactura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Desarrollo Experimental y Descripción de Evidencias CAD / Manufactura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Desarrollo Experimental y Descripción de Evidencias CAD / Manufactura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figura-1-acotamiento-de-tolerancias-y-diametros-de-eslabon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 1: Acotamiento de Tolerancias y Diámetros de Eslabón
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-2-detalle-de-holgura-interna-y-planos-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 2: Detalle de Holgura Interna y Planos de Referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-3-modelo-tridimensional-completo-en-solidworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 3: Modelo Tridimensional Completo en SolidWorks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-4-impresion-aditiva-en-prusa-mk4s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 4: Impresión Aditiva en Prusa MK4S
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-5-pieza-finalizada-y-articulada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 5: Pieza Finalizada y Articulada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumen-de-parametros-de-impresion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Resumen de Parámetros de Impresión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Proyectoballena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Medicionyexpla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medicion y Uso de maquinas en explanada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maquinaCNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquina CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-marco-teorico-y-principios-de-diseno-print-in-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Marco Teórico y Principios de Diseño Print-in-Place
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Marco Teórico y Principios de Diseño Print-in-Place">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-metodologia-print-in-place-pip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Metodología Print-in-Place (PiP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-densidad-de-relleno-infill-density-y-optimizacion-estrategica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Densidad de Relleno (Infill Density) y Optimización Estratégica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-desarrollo-experimental-y-descripcion-de-evidencias-cad-manufactura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Desarrollo Experimental y Descripción de Evidencias CAD / Manufactura
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Desarrollo Experimental y Descripción de Evidencias CAD / Manufactura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figura-1-acotamiento-de-tolerancias-y-diametros-de-eslabon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 1: Acotamiento de Tolerancias y Diámetros de Eslabón
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-2-detalle-de-holgura-interna-y-planos-de-referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 2: Detalle de Holgura Interna y Planos de Referencia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-3-modelo-tridimensional-completo-en-solidworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 3: Modelo Tridimensional Completo en SolidWorks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-4-impresion-aditiva-en-prusa-mk4s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 4: Impresión Aditiva en Prusa MK4S
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-5-pieza-finalizada-y-articulada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 5: Pieza Finalizada y Articulada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumen-de-parametros-de-impresion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Resumen de Parámetros de Impresión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-diseno-de-mecanismos-articulados-print-in-place-y-manufactura-aditiva-en-prusa-mk4s">Reporte de Práctica: Diseño de Mecanismos Articulados Print-in-Place y Manufactura Aditiva en Prusa MK4S</h1>
+<p><strong>Institución:</strong> Universidad Iberoamericana Puebla<br />
+<strong>Departamento:</strong> Ingenierías / Mecatrónica<br />
+<strong>Asignatura:</strong> Proyectos de Ingeniería<br />
+<strong>Ubicación:</strong> Laboratorio de Manufactura e Impresión 3D<br />
+<strong>Supervisión Académica:</strong> Mtro. Oliver Ochoa<br />
+<strong>Software Utilizado:</strong> SolidWorks 3D CAD / PrusaSlicer<br />
+<strong>Equipo de Manufactura:</strong> Impresora 3D Prusa MK4S (Tecnología FDM/FFF)  </p>
+<hr />
+<h2 id="1-objetivos">1. Objetivos</h2>
+<ul>
+<li><strong>General:</strong> Diseñar y manufacturar un mecanismo articulado con geometría compleja (<em>Print-in-Place</em>) utilizando SolidWorks y la impresora 3D Prusa MK4S, garantizando articulación mecánica funcional directamente desde la cama de impresión sin ensambles posteriores.</li>
+<li><strong>Específicos:</strong></li>
+<li>Dominar el uso avanzado de planos constructivos y geometría de referencia en SolidWorks para generar uniones articuladas internas en múltiples direcciones.</li>
+<li>Aplicar principios de tolerancias dimensionales en modelado CAD para evitar la fusión por soldadura térmica entre eslabones móviles adyacentes.</li>
+<li>Configurar los parámetros de rebanado (<em>slicing</em>) en PrusaSlicer para optimizar el peso, tiempo de impresión y consumo de filamento, ajustando el relleno (<em>infill</em>) al 5%.</li>
+<li>Operar la impresora 3D Prusa MK4S, comprendiendo la preparación de la cama caliente, la nivelación automática (<em>mesh bed leveling</em>) y el control de deposición del material.</li>
+</ul>
+<hr />
+<h2 id="2-marco-teorico-y-principios-de-diseno-print-in-place">2. Marco Teórico y Principios de Diseño <em>Print-in-Place</em></h2>
+<h3 id="a-metodologia-print-in-place-pip">A. Metodología <em>Print-in-Place</em> (PiP)</h3>
+<p>El diseño <em>Print-in-Place</em> permite fabricar mecanismos articulados totalmente funcionales en un solo ciclo de impresión aditiva. La clave del éxito de este método reside en la gestión estricta de las <strong>tolerancias de aire (clearance)</strong> entre piezas móviles:
+* <strong>Holgura Recomendada:</strong> Se requiere una separación libre de entre <span class="arithmatex">\(0.30\text{ mm}\)</span> y <span class="arithmatex">\(0.50\text{ mm}\)</span> entre las aristas de las bisagras macho y hembra.
+* <strong>Geometría de Cuelgue (Overhangs):</strong> Las juntas se diseñan con ángulos autosoportados (menores a <span class="arithmatex">\(45^\circ\)</span>) o uniones tipo esferoide/anillo cerrado para evitar la necesidad de soportes internos que bloqueen el movimiento.</p>
+<h3 id="b-densidad-de-relleno-infill-density-y-optimizacion-estrategica">B. Densidad de Relleno (<em>Infill Density</em>) y Optimización Estratégica</h3>
+<p>En piezas decorativas o articuladas sin carga estructural crítica, el Relleno al <strong>5%</strong> (con patrón giroide o de rejilla) aporta suficientes apoyos internos para las capas superiores (<em>top solid layers</em>) reduciendo drásticamente:
+1. El peso total del componente.
+2. El gasto ineficiente de filamento PLA/PETG.
+3. El tiempo de residencia del extrusor por capa, evitando sobrecalentamiento en zonas delgadas.</p>
+<hr />
+<h2 id="3-desarrollo-experimental-y-descripcion-de-evidencias-cad-manufactura">3. Desarrollo Experimental y Descripción de Evidencias CAD / Manufactura</h2>
+<p>Bajo la instrucción del Mtro. Oliver Ochoa, se modeló un pulpo articulado utilizando planos oblicuos y revolucionados en SolidWorks para definir cada eslabón de los tentáculos.</p>
+<h3 id="figura-1-acotamiento-de-tolerancias-y-diametros-de-eslabon">Figura 1: Acotamiento de Tolerancias y Diámetros de Eslabón</h3>
+<p>Se observa la vista en planta del perfil del tentáculo. Se utilizaron círculos concentricos acotados (<span class="arithmatex">\(\varnothing 6.50\text{ mm}\)</span>, <span class="arithmatex">\(\varnothing 5.50\text{ mm}\)</span>, <span class="arithmatex">\(\varnothing 3.50\text{ mm}\)</span>) para garantizar que la bisagra interna mantenga la separación radial requerida antes de extruir el siguiente segmento.</p>
+<p><img alt="Croquis de tolerancias en SolidWorks" src="../../Imagenesana/patapulpo.png" />
+<em>Figura 1: Verificación de diámetros y distancias de separación entre articulaciones en el croquis 2D.</em></p>
+<hr />
+<h3 id="figura-2-detalle-de-holgura-interna-y-planos-de-referencia">Figura 2: Detalle de Holgura Interna y Planos de Referencia</h3>
+<p>Se aprecian las cotas de precisión (<span class="arithmatex">\(\varnothing 6.50\text{ mm}\)</span>, <span class="arithmatex">\(\varnothing 5.50\text{ mm}\)</span>, <span class="arithmatex">\(\varnothing 2.80\text{ mm}\)</span>) y la disposición del <code>Plano 2</code>. Estos planos desfasados permitieron proyectar el ángulo de caída de cada tentáculo manteniendo las articulaciones aisladas en el espacio 3D.</p>
+<p><img alt="Detalle de plano de referencia y cotas" src="../../Imagenesana/patapulpo2.png" />
+<em>Figura 3: Trabajo con geometría de referencia (<code>Plano 2</code>) para la creación de uniones en serie.</em></p>
+<hr />
+<h3 id="figura-3-modelo-tridimensional-completo-en-solidworks">Figura 3: Modelo Tridimensional Completo en SolidWorks</h3>
+<p>Captura en pantalla del ensamble unibody del pulpo articulado en SolidWorks. Se aprecian múltiples planos de referencia (<code>Plano 4</code>, <code>Plano 6</code>, <code>Plano 12</code>) utilizados para proyectar la simetría y curvatura de los 8 tentáculos alrededor de la cabeza.</p>
+<p><img alt="Modelo 3D del pulpo en SolidWorks" src="../../Imagenesana/pulposolid.png" />
+<em>Figura 2: Renderizado e inspección de planos constructivos para el pulpo articulado.</em></p>
+<hr />
+<h3 id="figura-4-impresion-aditiva-en-prusa-mk4s">Figura 4: Impresión Aditiva en Prusa MK4S</h3>
+<p>El modelo fue exportado a formato <code>.STL</code>, procesado en PrusaSlicer con relleno al 5% y enviado a la impresora <strong>Prusa MK4S</strong>. En la pantalla LCD se observa el avance del proceso (98%) y la distribución plana de los tentáculos sobre la cama de impresión de PEI rugoso.</p>
+<p><img alt="Impresora 3D Prusa MK4S en proceso" src="../../Imagenesana/pulpoimpre.png" />
+<em>Figura 4: Fabricación aditiva del mecanismo Print-in-Place en la Prusa MK4S.</em></p>
+<hr />
+<h3 id="figura-5-pieza-finalizada-y-articulada">Figura 5: Pieza Finalizada y Articulada</h3>
+<p>Muestra la pieza retirada de la base de impresión. Gracias al control del <em>infill</em> al 5% y al cálculo exacto de holguras en SolidWorks, la pieza resultó liviana, rígida en la cabeza y con flexibilidad fluida e independiente en cada una de sus extremidades sin requerir limpieza adicional.</p>
+<p><img alt="Pieza final impresa y articulada" src="../../Imagenesana/pulplisto.png" />
+<em>Figura 5: Resultado final del pulpo articulado impreso en una sola pieza.</em></p>
+<hr />
+<h2 id="4-resumen-de-parametros-de-impresion">4. Resumen de Parámetros de Impresión</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parámetro</th>
+<th style="text-align: left;">Configuración en PrusaSlicer / Prusa MK4S</th>
+<th style="text-align: left;">Propósito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Material</strong></td>
+<td style="text-align: left;">Filamento PLA Rojo (<span class="arithmatex">\(1.75\text{ mm}\)</span>)</td>
+<td style="text-align: left;">Buena adherencia y rigidez dimensional</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Densidad de Relleno</strong></td>
+<td style="text-align: left;"><strong>5% (Giroide / Grid)</strong></td>
+<td style="text-align: left;">Reducción de peso, costo y tiempo de fabricación</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Altura de Capa</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(0.20\text{ mm}\)</span> (Quality)</td>
+<td style="text-align: left;">Balance óptimo entre acabado superficial y velocidad</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Soportes</strong></td>
+<td style="text-align: left;">Desactivados (<em>None</em>)</td>
+<td style="text-align: left;">Geometría 100% autosoportada por diseño</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Temperatura Extrusor/Cama</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(215^\circ\text{C} / 60^\circ\text{C}\)</span></td>
+<td style="text-align: left;">Fusión uniforme sin deformación en primeros estratos</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-conclusiones">5. Conclusiones</h2>
+<ul>
+<li>La metodología <em>Print-in-Place</em> permite optimizar los procesos de manufactura al eliminar las etapas de ensamblado manual y tolerado posterior.</li>
+<li>El dominio de la geometría de referencia (planos desfasados y angulados) en SolidWorks es esencial para construir modelos con movimientos complejos tridimensionales.</li>
+<li>La calibración de parámetros en PrusaSlicer (especialmente la reducción del relleno al 5%) demostró que es posible obtener piezas funcionales y ligeras sin comprometer la integridad estructural ni la estética de la pieza final.
+<a href="../../Imagenesana/Pulpoimpresion.zip">pulpoimpre</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

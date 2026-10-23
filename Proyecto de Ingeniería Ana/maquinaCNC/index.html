@@ -1,0 +1,1876 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Medicionyexpla/">
+      
+      
+        <link rel="next" href="../../Reflexiones/VisionMecatronica/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Maquina CNC - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reporte-de-practica-preparacion-cam-en-vcarve-pro-y-maquinado-en-router-cnc-industrial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Maquina CNC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Practicas/Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soldaduras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CuboSolidWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/SolidWorksDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelado Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CorteLaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte Láser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoBallena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ClaseMaquinas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase Maquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoImpresi%C3%B3n3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Impresion 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/MaquinaCNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Máquina CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Carrito
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto Carrito
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Chasis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chasis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Codigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codigo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Circuito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Circuito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Resultado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion carrito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Ana
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Ana
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte y soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ensamblaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Laser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proyectosolid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto pulpo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Proyectoballena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Medicionyexpla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medicion y Uso de maquinas en explanada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquina CNC
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquina CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-marco-teorico-y-software-vcarve-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Marco Teórico y Software VCarve Pro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Marco Teórico y Software VCarve Pro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-preparacion-y-funciones-clave-en-vcarve-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Preparación y Funciones Clave en VCarve Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-descripcion-de-evidencias-e-imagenes-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Descripción de Evidencias e Imágenes de la Práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Descripción de Evidencias e Imágenes de la Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figura-1-importacion-vectorial-y-cierre-de-vectores-en-vcarve-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 1: Importación Vectorial y Cierre de Vectores en VCarve Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-2-configuracion-de-trayectorias-y-exportacion-de-codigo-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 2: Configuración de Trayectorias y Exportación de Código G
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-3-fijacion-del-material-y-cama-de-sacrificio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 3: Fijación del Material y Cama de Sacrificio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-4-explicacion-del-equipo-y-protocolo-por-el-mtro-oliver-ochoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 4: Explicación del Equipo y Protocolo por el Mtro. Oliver Ochoa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-5-montaje-de-la-fresa-y-ajuste-del-collet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 5: Montaje de la Fresa y Ajuste del Collet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-6-terminado-de-tortuga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 6: Terminado de tortuga
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumen-del-protocolo-de-operacion-del-router-cnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Resumen del Protocolo de Operación del Router CNC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-marco-teorico-y-software-vcarve-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Marco Teórico y Software VCarve Pro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Marco Teórico y Software VCarve Pro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-preparacion-y-funciones-clave-en-vcarve-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Preparación y Funciones Clave en VCarve Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-descripcion-de-evidencias-e-imagenes-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Descripción de Evidencias e Imágenes de la Práctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Descripción de Evidencias e Imágenes de la Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#figura-1-importacion-vectorial-y-cierre-de-vectores-en-vcarve-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 1: Importación Vectorial y Cierre de Vectores en VCarve Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-2-configuracion-de-trayectorias-y-exportacion-de-codigo-g" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 2: Configuración de Trayectorias y Exportación de Código G
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-3-fijacion-del-material-y-cama-de-sacrificio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 3: Fijación del Material y Cama de Sacrificio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-4-explicacion-del-equipo-y-protocolo-por-el-mtro-oliver-ochoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 4: Explicación del Equipo y Protocolo por el Mtro. Oliver Ochoa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-5-montaje-de-la-fresa-y-ajuste-del-collet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 5: Montaje de la Fresa y Ajuste del Collet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#figura-6-terminado-de-tortuga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Figura 6: Terminado de tortuga
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-resumen-del-protocolo-de-operacion-del-router-cnc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Resumen del Protocolo de Operación del Router CNC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="reporte-de-practica-preparacion-cam-en-vcarve-pro-y-maquinado-en-router-cnc-industrial">Reporte de Práctica: Preparación CAM en VCarve Pro y Maquinado en Router CNC Industrial</h1>
+<p><strong>Institución:</strong> Universidad Iberoamericana Puebla<br />
+<strong>Departamento:</strong> Ingenierías / Mecatrónica<br />
+<strong>Asignatura:</strong> Proyectos de Ingeniería<br />
+<strong>Ubicación:</strong> Instituto de Diseño e Innovación Tecnológica (IDIT) - Taller de CNC<br />
+<strong>Supervisión Académica:</strong> Mtro. Oliver Ochoa<br />
+<strong>Integrantes del Proyecto:</strong> Roberto Alejandro y Colaboradores<br />
+<strong>Software CAM:</strong> VCarve Pro<br />
+<strong>Equipo de Maquinado:</strong> Router CNC Asia Robótica (Modelo AR-1325)  </p>
+<hr />
+<h2 id="1-objetivos">1. Objetivos</h2>
+<ul>
+<li><strong>General:</strong> Preparar, configurar y ejecutar el maquinado CNC de un modelo vectorial tridimensional (tortuga) mediante el software CAM VCarve Pro y el router CNC industrial Asia Robótica.</li>
+<li><strong>Específicos:</strong></li>
+<li>Importar archivos vectoriales en formato <code>.DXF</code> a VCarve Pro, verificando el cierre de vectores, dimensiones de la pieza y alineación en el plano de trabajo.</li>
+<li>Configurar trayectorias de herramienta de <strong>Perfilado</strong> y <strong>Cajeado (Pocketing)</strong>, definiendo profundidades de corte, diámetros de fresa y velocidades.</li>
+<li>Exportar el código G posprocesado (<code>.nc</code>) a una memoria USB mediante la configuración adecuada de posprocesador (<code>AsiaRobotica-NK105</code>).</li>
+<li>Operar el Router CNC Asia Robótica AR-1325, comprendiendo el protocolo de encendido, uso de la cama de sacrificio, fijación mecánica mediante prensas/clamps, montaje de herramienta en el collet, tarado de ejes (<span class="arithmatex">\(X, Y, Z\)</span>) y activación del sistema de aspiración/limpieza de viruta.</li>
+</ul>
+<hr />
+<h2 id="2-marco-teorico-y-software-vcarve-pro">2. Marco Teórico y Software VCarve Pro</h2>
+<p>El maquinado por Router CNC se divide en dos fases indispensables: la <strong>fase CAM (Computer-Aided Manufacturing)</strong> y la <strong>fase de ejecución en máquina</strong>.</p>
+<h3 id="a-preparacion-y-funciones-clave-en-vcarve-pro">A. Preparación y Funciones Clave en VCarve Pro</h3>
+<ul>
+<li><strong>Importación <code>.DXF</code> y Cierre de Vectores:</strong> Al importar geometrías externas, VCarve permite identificar trazos abiertos y unificarlos con la herramienta <em>Join Vectors</em> (Unir vectores). Vectores abiertos impiden generar operaciones de cajeado o perfilado cerrado.</li>
+<li><strong>Dimensionado del Material:</strong> Se definen las dimensiones exactas del bloque (<span class="arithmatex">\(X, Y, Z\)</span>) y el origen del punto cero (usualmente esquina inferior izquierda y superficie superior del material).</li>
+<li><strong>Cajeado (Pocketing / Machining):</strong> Operación donde la herramienta remueve el material contenido dentro de un contorno cerrado hasta alcanzar una profundidad calculada (<span class="arithmatex">\(Z\)</span>), dejando cavidades limpias.</li>
+<li><strong>Perfilado (Profiling):</strong> Trayectoria que sigue el contorno interior, exterior o sobre el vector para realizar el corte completo de la silueta o el marcado de aristas.</li>
+<li><strong>Posprocesado (<code>.nc</code>):</strong> Traducción de las trayectorias virtuales a código numérico comprensible por el controlador DSP/NK105 de la máquina CNC.</li>
+</ul>
+<hr />
+<h2 id="3-descripcion-de-evidencias-e-imagenes-de-la-practica">3. Descripción de Evidencias e Imágenes de la Práctica</h2>
+<p>A continuación se detalla la secuencia del proceso mediante las fotografías y videos capturados durante la sesión de laboratorio:</p>
+<h3 id="figura-1-importacion-vectorial-y-cierre-de-vectores-en-vcarve-pro">Figura 1: Importación Vectorial y Cierre de Vectores en VCarve Pro</h3>
+<p>Muestra la interfaz de trabajo de VCarve Pro con el vector de la tortuga importado desde un archivo <code>.DXF</code>. Se verifica la escala del material (aislante de poliestireno extruido / espuma rígida) y el cierre perfecto de los contornos para permitir las operaciones de cajeado en las secciones del caparazón y extremidades.</p>
+<p><img alt="Diseño vectorial de la tortuga en VCarve" src="../../Imagenesana/archivotort.png" />
+<em>Figura 1: Organización de vectores y verificación de aristas cerradas para la tortuga en VCarve.</em></p>
+<hr />
+<h3 id="figura-2-configuracion-de-trayectorias-y-exportacion-de-codigo-g">Figura 2: Configuración de Trayectorias y Exportación de Código G</h3>
+<p>Muestra el panel <em>Trayectorias de herramientas</em> de VCarve. Se aprecian las operaciones configuradas: <strong>Perfilado 1</strong> y <strong>Cajeado 1</strong>. En el panel superior se selecciona el posprocesador específico de la máquina: <strong><code>AsiaRobotica-NK105.3-arcs (*.nc)</code></strong> para guardar las trayectorias directamente en la memoria USB.</p>
+<p><img alt="Configuración de posprocesador y cajeado" src="../../Imagenesana/especi.png" />
+<em>Figura 2: Selección de operaciones (Perfilado/Cajeado) y exportación posprocesada para la controladora Asia Robótica.</em></p>
+<hr />
+<h3 id="figura-3-fijacion-del-material-y-cama-de-sacrificio">Figura 3: Fijación del Material y Cama de Sacrificio</h3>
+<p>Muestra el detalle del área de trabajo del router CNC Asia Robótica AR-1325. Se observa la <strong>cama de sacrificio</strong> de MDF en la parte inferior, sobre la cual se coloca la placa de poliestireno rosa. La pieza se asegura rígidamente utilizando un clamp o prensa de sujeción mecánica sobre el riel en T (<em>T-slot</em>) para evitar vibraciones o desplazamientos durante el maquinado.</p>
+<p><img alt="Sujeción de la pieza mediante clamp mecánico" src="../../Imagenesana/seguro.png" />
+<em>Figura 3: Sistema de fijación con clamp sobre el riel en T y la cama de sacrificio del router CNC.</em></p>
+<hr />
+<h3 id="figura-4-explicacion-del-equipo-y-protocolo-por-el-mtro-oliver-ochoa">Figura 4: Explicación del Equipo y Protocolo por el Mtro. Oliver Ochoa</h3>
+<p>El Mtro. Oliver Ochoa explica el funcionamiento general de la mesa de maquinado del Router CNC Asia Robótica AR-1325, señalando los límites de carrera de los ejes <span class="arithmatex">\(X, Y, Z\)</span>, el área de sujeción y el uso de los controles del panel principal.</p>
+<p><img alt="Mtro. Oliver Ochoa explicando el Router CNC" src="../../Imagenesana/asiamaq1.png" />
+<em>Figura 4: Explicación previa a la puesta en marcha sobre el Router CNC Asia Robótica AR-1325.</em></p>
+<hr />
+<h3 id="figura-5-montaje-de-la-fresa-y-ajuste-del-collet">Figura 5: Montaje de la Fresa y Ajuste del Collet</h3>
+<p>Estudiantes realizando el montaje de la fresa de corte en el husillo (spindle). Se observa el proceso de inserción del collet/boquilla y el apriete mecánico mediante la llave para asegurar que la herramienta no sufra desalineamiento o soltura bajo carga.</p>
+<p><img alt="Montaje de fresa en el husillo" src="../../Imagenesana/fresaasia.png" />
+<em>Figura 5: Procedimiento de ajuste de la herramienta en el husillo del router CNC.</em></p>
+<hr />
+<h3 id="figura-6-terminado-de-tortuga">Figura 6: Terminado de tortuga</h3>
+<p>Se muestra una imagen de la maquinaria realizando el terminado final de la figura que agregamos previamente en archivo dxf.</p>
+<p><img alt="Montaje de fresa en el husillo" src="../../Imagenesana/tort.jpg" />
+<em>Figura 5: Tortugadxf.</em></p>
+<h2 id="4-resumen-del-protocolo-de-operacion-del-router-cnc">4. Resumen del Protocolo de Operación del Router CNC</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Etapa</th>
+<th style="text-align: left;">Operación Clave</th>
+<th style="text-align: left;">Equipo / Componente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>1. Diseño CAM</strong></td>
+<td style="text-align: left;">Cierre de vectores, cajeado y perfilado</td>
+<td style="text-align: left;">Software VCarve Pro</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2. Posprocesado</strong></td>
+<td style="text-align: left;">Exportación de archivo <code>.nc</code></td>
+<td style="text-align: left;">Posprocesador <code>AsiaRobotica-NK105</code> en memoria USB</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3. Encendido y Calibración</strong></td>
+<td style="text-align: left;">Puesta en marcha y posicionamiento de orígenes (<span class="arithmatex">\(X_0, Y_0, Z_0\)</span>)</td>
+<td style="text-align: left;">Control DSP / Controladora NK105</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>4. Fijación del Material</strong></td>
+<td style="text-align: left;">Presión mecánica sobre la cama de sacrificio</td>
+<td style="text-align: left;">Clamps / Prensas sobre riel T-slot</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>5. Herramental</strong></td>
+<td style="text-align: left;">Ajuste de fresa con collet y apriete manual con llave</td>
+<td style="text-align: left;">Husillo (Spindle) refrigerado</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>6. Ejecución y Limpieza</strong></td>
+<td style="text-align: left;">Activación del spindle y extractor de viruta</td>
+<td style="text-align: left;">Sistema de aspiración del IDIT</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-conclusiones">5. Conclusiones</h2>
+<ul>
+<li>La correcta gestión digital en VCarve Pro (cierre de vectores y aplicación de offset/cajeado) es indispensable para evitar colisiones de la herramienta o maquinados incompletos.</li>
+<li>La utilización de la cama de sacrificio garantiza que las herramientas penetren completamente el grosor de la pieza en operaciones de perfilado sin dañar la estructura de aluminio del router.</li>
+<li>La práctica permitió consolidar el flujo completo de ingeniería de manufactura asistida por computadora (CAD-CAM-CNC), logrando un producto final (tortuga) con excelente calidad superficial y tolerancias geométricas exactas.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
