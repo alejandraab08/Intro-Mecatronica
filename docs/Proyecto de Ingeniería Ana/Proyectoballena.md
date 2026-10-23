@@ -76,4 +76,5 @@ Tras la evaluación del primer prototipo, se realizaron las correcciones necesar
 ## 7. Conclusiones
 
 La realización de este proyecto permitió dominar el flujo metodológico entre la conceptualización manual, el diseño asistido por computadora y la manufactura aditiva/sustractiva. La correcta integración de la compensación de Kerf y la iteración técnica tras la primera prueba resultaron fundamentales para obtener un modelo tridimensional rígido, estéticamente limpio y funcionalmente preciso.
-//subirepo
+
+[zipballena](../Imagenesana/whale.zip)

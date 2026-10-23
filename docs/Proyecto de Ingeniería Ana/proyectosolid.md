@@ -97,4 +97,4 @@ Muestra la pieza retirada de la base de impresión. Gracias al control del *infi
 * La metodología *Print-in-Place* permite optimizar los procesos de manufactura al eliminar las etapas de ensamblado manual y tolerado posterior.
 * El dominio de la geometría de referencia (planos desfasados y angulados) en SolidWorks es esencial para construir modelos con movimientos complejos tridimensionales.
 * La calibración de parámetros en PrusaSlicer (especialmente la reducción del relleno al 5%) demostró que es posible obtener piezas funcionales y ligeras sin comprometer la integridad estructural ni la estética de la pieza final.
-//holasubirepooooonoswsporknosesube
+[pulpoimpre](../Imagenesana/Pulpoimpresion.zip)
