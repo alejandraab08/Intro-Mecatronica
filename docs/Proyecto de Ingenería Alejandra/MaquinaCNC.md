@@ -15,6 +15,13 @@
 El objetivo de este proyecto consistió en fabricar/esculpir una **mariposa** utilizando una fresadora automática CNC. A diferencia del corte láser, la CNC utiliza un proceso mediante una herramienta de corte giratoria (fresa), lo que requiere una preparación especial en los recorridos y profundidades.
 
 Para este proyecto, partimos de un diseño vectorial en formato `.DXF` con la silueta y los detalles internos de las alas de la mariposa.
+--- 
+
+## Práctica previa en NCViewer:
+
+Como paso previo al maquinado real, realizamos una simulación digital en NCViewer para comprender la estructura del código G (G-code) y visualizar la trayectoria de la herramienta (toolpath). Esta práctica nos permitió verificar los movimientos de la fresadora CNC, corregir posibles colisiones y asegurar la correcta generación del programa antes de pasar a la máquina física.
+
+![Foto3](../imagenes/mmm.png){loading=lazy}
 
 ---
 

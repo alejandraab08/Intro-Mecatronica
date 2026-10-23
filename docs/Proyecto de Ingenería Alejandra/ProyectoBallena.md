@@ -59,14 +59,18 @@ Regresamos al modelo en SolidWorks para hacer los ajustes necesarios:
 1. **Modificación de cotas:** Se corrigieron las medidas de las piezas y se aplicaron simetrías.
 2. **Segundo corte:** Volvimos a enviar las piezas a la cortadora láser.
 3. **Ensamble:** Las piezas encajaron perfectamente a presión, logrando una estructura limpia y con muy buenas uniones press-fit.
-
 ---
+
+
 ## 6. Fotos y Evidencias
 ![Foto1](../imagenes/ba (1).jpeg){loading=lazy}
 ![Foto2](../imagenes/ba (2).jpeg){loading=lazy}
 ![Foto3](../imagenes/bo (1).png){loading=lazy}
 ![Foto4](../imagenes/bo (2).png){loading=lazy}
+---
 
 ## Conclusión
+[Haga click para descargar los archivos de la ballena.zip](../imagenes/BALLENACORTAR.zip)
+
 
 Este proyecto nos permitió experimentar por completo el proceso diseño y corte láser: desde la idea y boceto en papel, hasta el uso de tolerancias, diseño por computadora y prototipado. El ajuste correcto del Kerf y la corrección tras el primer intento fueron claves para conseguir una **ballena ensamblable** precisa y bonita.
