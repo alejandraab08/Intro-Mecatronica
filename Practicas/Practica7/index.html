@@ -1,0 +1,1897 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso de Introducción a la Mecatrónica — IBERO Puebla">
+      
+      
+      
+      
+        <link rel="prev" href="../Practica6/">
+      
+      
+        <link rel="next" href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Practica 7 - Introducción a la Mecatrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-de-laboratorio-control-en-lazo-abierto-y-lazo-cerrado" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-header__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introducción a la Mecatrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 7
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introducción a la Mecatrónica" class="md-nav__button md-logo" aria-label="Introducción a la Mecatrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introducción a la Mecatrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SobreMi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre Mí
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prácticas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prácticas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Practica6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 7
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practica 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Conceptos Clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos de la Práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parte-a-lazo-abierto-pruebas-fisicas-con-el-carro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Parte A · Lazo Abierto (Pruebas Físicas con el Carro)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Parte A · Lazo Abierto (Pruebas Físicas con el Carro)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-desviaciones-mediciones-fisicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Desviaciones (Mediciones Físicas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-parte-b-lazo-cerrado-simulacion-en-la-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Parte B · Lazo Cerrado (Simulación en la Demo)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Parte B · Lazo Cerrado (Simulación en la Demo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-sintonizacion-simulador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Sintonización (Simulador)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-reto-extra-y-eleccion-de-parametros-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Reto Extra y Elección de Parámetros Finales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Reto Extra y Elección de Parámetros Finales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#justificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Alejandra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Soldaduras/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Soldaduras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CuboSolidWorks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/SolidWorksDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelado Solid Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/CorteLaser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte Láser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoBallena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ClaseMaquinas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clase Maquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/ProyectoImpresi%C3%B3n3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Impresion 3D
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/MaquinaCNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Máquina CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingener%C3%ADa%20Alejandra/Moldes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Moldes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Carrito
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto Carrito
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Propuesta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prototipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Chasis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chasis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Codigo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Codigo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Circuito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Circuito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20carrito/Resultado/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presentacion carrito
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de Ingeniería Ana
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de Ingeniería Ana
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Solid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corte y soldadura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Ensamblaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ensamblaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Laser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laser
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/proyectosolid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto pulpo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Proyectoballena/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Ballena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/Medicionyexpla/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medicion y Uso de maquinas en explanada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Proyecto%20de%20Ingenier%C3%ADa%20Ana/maquinaCNC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maquina CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflexiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reflexiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Reflexiones/VisionMecatronica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision Mecatronica Alejandra
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Conceptos Clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivos-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivos de la Práctica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parte-a-lazo-abierto-pruebas-fisicas-con-el-carro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Parte A · Lazo Abierto (Pruebas Físicas con el Carro)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Parte A · Lazo Abierto (Pruebas Físicas con el Carro)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-desviaciones-mediciones-fisicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Desviaciones (Mediciones Físicas)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-parte-b-lazo-cerrado-simulacion-en-la-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Parte B · Lazo Cerrado (Simulación en la Demo)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Parte B · Lazo Cerrado (Simulación en la Demo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-sintonizacion-simulador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Sintonización (Simulador)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-reto-extra-y-eleccion-de-parametros-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Reto Extra y Elección de Parámetros Finales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Reto Extra y Elección de Parámetros Finales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#justificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Justificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-conclusiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conclusiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-de-laboratorio-control-en-lazo-abierto-y-lazo-cerrado">Práctica de Laboratorio: Control en Lazo Abierto y Lazo Cerrado</h1>
+<p><strong>Asignatura:</strong> Introducción a la Mecatrónica<br />
+<strong>Institución:</strong> Universidad Iberoamericana Puebla  </p>
+<hr />
+<h2 id="conceptos-clave">💡 Conceptos Clave</h2>
+<p>Para entender mejor esta práctica, definimos los términos principales en palabras sencillas:</p>
+<ul>
+<li><strong>Lazo Abierto:</strong> Es cuando le das una orden a una máquina y la ejecuta a ciegas, sin revisar si lo hizo bien o si algo la desvió en el camino.</li>
+<li><strong>Lazo Cerrado:</strong> Es cuando la máquina tiene un 
+sensor que revisa todo el tiempo lo que está haciendo para corregirse sola si se equivoca.</li>
+<li><strong>PWM :</strong> Es la forma en que le enviamos fuerza o velocidad constante al motor.</li>
+<li><strong><span class="arithmatex">\(Kp\)</span>:</strong> La fuerza con la que el sistema reacciona para corregir un error. Si es muy alta, el carrito avanza rápido pero puede pasarse de largo.</li>
+<li><strong><span class="arithmatex">\(Kd\)</span>:</strong> Funciona como un freno inteligente. Ayuda a frenar antes de llegar a la meta para no pasarse.</li>
+<li><strong><span class="arithmatex">\(Ki\)</span>:</strong> Es la memoria del sistema. Suma los errores que quedaron pendientes al final y empuja un poquito más hasta dejarlo exactamente en la meta.</li>
+<li><strong>Sobreimpulso:</strong> Qué tanto se pasa el sistema de la meta esperada antes de regresar y detenerse (medido en porcentaje).</li>
+<li><strong>Tiempo de Establecimiento:</strong> El tiempo total (en segundos) que tarda el sistema en quedarse estable cerca de la meta.</li>
+<li><strong>Error Permanente:</strong> La diferencia o distancia final que faltó para llegar a la meta deseada.</li>
+</ul>
+<hr />
+<h2 id="1-objetivos-de-la-practica">1. Objetivos de la Práctica</h2>
+<ul>
+<li><strong>Parte A (Lazo Abierto):</strong> Probar el carrito físico programando movimientos por tiempo (sin sensores que lo corrijan) para ver cuánto se desvía cuando cambia el tipo de piso o cuando le agregamos peso.</li>
+<li><strong>Parte B (Lazo Cerrado):</strong> Usar el simulador para ajustar las ganancias (<span class="arithmatex">\(Kp\)</span>, <span class="arithmatex">\(Kd\)</span>, <span class="arithmatex">\(Ki\)</span>) paso a paso, logrando que la respuesta sea rápida, no se pase de la meta y no tenga error final.</li>
+</ul>
+<hr />
+<h2 id="2-parte-a-lazo-abierto-pruebas-fisicas-con-el-carro">2. Parte A · Lazo Abierto (Pruebas Físicas con el Carro)</h2>
+<p>En esta parte se programó una secuencia fija en el carrito (avanzar 2 segundos, girar 1 segundo y avanzar 2 segundos) manteniendo la misma fuerza en los motores (PWM fijo).</p>
+<h3 id="tabla-de-desviaciones-mediciones-fisicas">Tabla de Desviaciones (Mediciones Físicas)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Condición del Piso / Carga</th>
+<th style="text-align: center;">Intento</th>
+<th style="text-align: center;">Desviación del punto final (cm)</th>
+<th style="text-align: left;">Observaciones simples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Piso de referencia</strong> (Superficie lisa / Sin carga)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.5 cm</td>
+<td style="text-align: left;">Movimiento bastante recto, solo se desvió un poco a la izquierda por pequeña diferencia entre motores.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Piso de referencia</strong> (Superficie lisa / Sin carga)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.8 cm</td>
+<td style="text-align: left;">Repitió casi la misma trayectoria; la mayor parte de la desviación ocurrió al momento de girar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Otro piso o con carga</strong> (Superficie rugosa o con peso)</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5.2 cm</td>
+<td style="text-align: left;">Al haber más fricción, los motores batallaron más y el carro avanzó menos distancia en los 2 segundos.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Otro piso o con carga</strong> (Superficie rugosa o con peso)</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6.0 cm</td>
+<td style="text-align: left;">El peso extra hizo que el carrito se desviara mucho más de la meta que teníamos planeada.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a href="https://www.youtube.com/watch?v=cbQn0WWi4As&amp;t=56s">Ver el video de las pruebas físicas en YouTube</a></p>
+<hr />
+<h2 id="3-parte-b-lazo-cerrado-simulacion-en-la-demo">3. Parte B · Lazo Cerrado (Simulación en la Demo)</h2>
+<p>Siguiendo la receta recomendada, ajustamos las ganancias en este orden estricto: <strong>primero <span class="arithmatex">\(Kp\)</span>, después <span class="arithmatex">\(Kd\)</span> y al final <span class="arithmatex">\(Ki\)</span></strong>.</p>
+<h3 id="tabla-de-sintonizacion-simulador">Tabla de Sintonización (Simulador)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Intento</th>
+<th style="text-align: center;"><span class="arithmatex">\(Kp\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(Ki\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(Kd\)</span></th>
+<th style="text-align: center;">Sobreimpulso (%)</th>
+<th style="text-align: center;">Tiempo de establecimiento (s)</th>
+<th style="text-align: center;">Error permanente</th>
+<th style="text-align: left;">Explicación sencilla de lo que pasó</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">2.0</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">12.5%</td>
+<td style="text-align: center;">4.2 s</td>
+<td style="text-align: center;">0.2</td>
+<td style="text-align: left;">El sistema respondió rápido pero se pasó de la meta un <span class="arithmatex">\(12.5\%\)</span> antes de regresar.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: center;">1.5</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: center;">1.2</td>
+<td style="text-align: center;">3.1%</td>
+<td style="text-align: center;">2.8 s</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: left;">Al aumentar <span class="arithmatex">\(Kd\)</span> frenó a tiempo (solo <span class="arithmatex">\(3.1\%\)</span> de sobreimpulso) y <span class="arithmatex">\(Ki\)</span> eliminó el error final.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><img alt="Foto1" loading="lazy" src="../../imagenes/wow%20%281%29.png" />
+<img alt="Foto1" loading="lazy" src="../../imagenes/wow%20%282%29.png" /></p>
+<hr />
+<h2 id="4-reto-extra-y-eleccion-de-parametros-finales">4. Reto Extra y Elección de Parámetros Finales</h2>
+<ul>
+<li><strong>Requisito solicitado:</strong> Sobreimpulso menor a <span class="arithmatex">\(5\%\)</span> y tiempo de establecimiento menor a <span class="arithmatex">\(5\text{ segundos}\)</span>.</li>
+<li><strong>Valores finales elegidos:</strong> <span class="arithmatex">\(Kp = 1.5\)</span>, <span class="arithmatex">\(Ki = 0.1\)</span>, <span class="arithmatex">\(Kd = 1.2\)</span>.</li>
+<li><strong>Resultados logrados:</strong></li>
+<li><strong>Sobreimpulso:</strong> <span class="arithmatex">\(3.1\%\)</span> <em>(Cumple al ser menor que <span class="arithmatex">\(5\%\)</span>)</em>.</li>
+<li><strong>Tiempo de establecimiento:</strong> <span class="arithmatex">\(2.8\text{ s}\)</span> <em>(Cumple al ser menor que <span class="arithmatex">\(5\text{ s}\)</span>)</em>.</li>
+<li><strong>Error permanente:</strong> <span class="arithmatex">\(0.0\)</span> <em>(Quedó exactamente en la meta)</em>.</li>
+</ul>
+<h3 id="justificacion">Justificación</h3>
+<p>Elegimos esta combinación porque los tres componentes se ayudan entre sí:
+1. Con <span class="arithmatex">\(Kp = 1.5\)</span> logramos que el sistema arranque con buena velocidad hacia la meta.
+2. Agregando <span class="arithmatex">\(Kd = 1.2\)</span>, el sistema detecta qué tan rápido se acerca y aplica un "frenado inteligente", evitando que se pase de largo y bajando la sobreoscilación a solo <span class="arithmatex">\(3.1\%\)</span>.
+3. Finalmente, <span class="arithmatex">\(Ki = 0.1\)</span> le da un último empujoncito al final para corregir cualquier desfase, garantizando que el error permanente siempre sea lo más cercano a cero (<span class="arithmatex">\(0.0\)</span>).</p>
+<hr />
+<h2 id="5-conclusiones">5. Conclusiones</h2>
+<ol>
+<li><strong>Lazo Abierto (Carro Físico):</strong> Comprobamos que trabajar a ciegas (por puros tiempos) no funciona bien en el mundo real. Cuando cambiamos el tipo de piso o pusimos peso sobre el carrito, la desviación del punto final aumentó hasta 3 veces más (<span class="arithmatex">\(6.0\text{ cm}\)</span>). Esto pasa porque el carro no tiene forma de saber que se está desviando para corregirse.</li>
+<li><strong>Lazo Cerrado (Simulador):</strong> La retroalimentación constante permite que el sistema mida su error en cada instante y se corrija solo. La receta de sintonización (<span class="arithmatex">\(P \rightarrow D \rightarrow I\)</span>) nos enseñó cómo balancear la velocidad de llegada, evitar golpes o pasadas de largo y asegurar que llegue exactamente al lugar deseado.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "content.tooltips", "navigation.sections"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
